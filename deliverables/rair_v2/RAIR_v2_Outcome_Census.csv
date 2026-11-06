@@ -1,0 +1,141 @@
+question_id,seed,system,status,answer,EM,F1,stop,llm_calls,retrieval_calls,prompt_tokens,output_tokens,seconds
+5abef8fd5542990832d3a111,42,RAIR,answered,seven,1.0,1.0000,all_gaps_resolved,10,2,8117,630,13.1315
+5abef8fd5542990832d3a111,42,KAIR,answered,4,0.0,0.0000,agent_complete,5,1,6301,540,10.7019
+5abef8fd5542990832d3a111,43,KAIR,answered,seven,1.0,1.0000,agent_complete,5,1,4944,375,7.7774
+5abef8fd5542990832d3a111,43,RAIR,answered,seven,1.0,1.0000,all_gaps_resolved,10,2,8028,619,12.5438
+5a7624b85542992db947372c,42,KAIR,answered,"January 18, 1813",1.0,1.0000,agent_complete,9,2,11972,891,18.9342
+5a7624b85542992db947372c,42,RAIR,answered,"January 18, 1813",1.0,1.0000,all_gaps_resolved,10,2,7847,603,12.7647
+5a7624b85542992db947372c,43,RAIR,answered,"January 18, 1813",1.0,1.0000,all_gaps_resolved,10,2,7585,472,10.6056
+5a7624b85542992db947372c,43,KAIR,abstained,,0.0,0.0000,agent_complete,5,1,5998,527,11.0179
+5a8f4c8d554299458435d5a3,42,RAIR,abstained,,0.0,0.0000,all_gaps_resolved,6,1,4345,249,6.0164
+5a8f4c8d554299458435d5a3,42,KAIR,answered,more than 70,0.0,0.8571,agent_complete,5,1,5493,503,10.5827
+5a8f4c8d554299458435d5a3,43,KAIR,abstained,,0.0,0.0000,agent_complete,5,1,5030,452,9.5894
+5a8f4c8d554299458435d5a3,43,RAIR,answered,more than 70,0.0,0.8571,all_gaps_resolved,10,2,7648,480,10.8521
+5ac497025542997ea680ca8d,42,KAIR,answered,"Dan Lin, Roy Lee, Phil Lord, and Christopher Miller",1.0,1.0000,agent_complete,5,1,6138,524,11.3808
+5ac497025542997ea680ca8d,42,RAIR,answered,"Dan Lin, Roy Lee, Phil Lord, and Christopher Miller",1.0,1.0000,all_gaps_resolved,14,3,12490,1045,22.8890
+5ac497025542997ea680ca8d,43,RAIR,answered,"Dan Lin, Roy Lee, Phil Lord and Christopher Miller",1.0,1.0000,all_gaps_resolved,10,2,8463,711,15.1084
+5ac497025542997ea680ca8d,43,KAIR,answered,"Warner Animation Group, Dan Lin, Roy Lee, Phil Lord and Christopher Miller",0.0,0.8571,agent_complete,5,1,6269,441,10.0970
+5adbda2755429944faac2385,42,RAIR,answered,Philip K. Dick,1.0,1.0000,budget_exhausted,18,4,16316,1263,28.5315
+5adbda2755429944faac2385,42,KAIR,answered,Philip K. Dick,1.0,1.0000,agent_complete,9,2,12042,669,17.2757
+5adbda2755429944faac2385,43,KAIR,answered,Philip K. Dick,1.0,1.0000,agent_complete,5,1,4717,274,7.6799
+5adbda2755429944faac2385,43,RAIR,answered,Philip K. Dick,1.0,1.0000,all_gaps_resolved,10,2,8385,763,16.3303
+5a7cffb755429907fabef09f,42,KAIR,answered,Hugh Dowding,1.0,1.0000,agent_complete,5,1,6604,465,10.9479
+5a7cffb755429907fabef09f,42,RAIR,answered,Hugh Dowding,1.0,1.0000,all_gaps_resolved,6,1,4518,265,6.5946
+5a7cffb755429907fabef09f,43,RAIR,answered,Hugh Dowding,1.0,1.0000,all_gaps_resolved,18,4,15831,999,21.7959
+5a7cffb755429907fabef09f,43,KAIR,answered,Hugh Dowding,1.0,1.0000,agent_complete,5,1,5659,481,10.6164
+5a7a68d25542996c55b2dd98,42,RAIR,answered,second cousin once removed,1.0,1.0000,all_gaps_resolved,10,2,8541,894,18.7689
+5a7a68d25542996c55b2dd98,42,KAIR,answered,second cousin once removed,1.0,1.0000,agent_complete,5,1,5825,525,11.4787
+5a7a68d25542996c55b2dd98,43,KAIR,answered,second cousin once removed,1.0,1.0000,agent_complete,9,2,12718,932,21.5082
+5a7a68d25542996c55b2dd98,43,RAIR,answered,second cousin once removed,1.0,1.0000,all_gaps_resolved,10,2,8390,796,16.8909
+5ab31adc554299233954ff0a,42,KAIR,answered,2.3 million pesos,1.0,1.0000,agent_complete,5,1,6180,503,11.3869
+5ab31adc554299233954ff0a,42,RAIR,answered,2.3 million pesos,1.0,1.0000,all_gaps_resolved,6,1,4716,494,10.5369
+5ab31adc554299233954ff0a,43,RAIR,answered,2.3 million pesos,1.0,1.0000,all_gaps_resolved,10,2,8391,813,17.2800
+5ab31adc554299233954ff0a,43,KAIR,answered,2.3 million pesos,1.0,1.0000,agent_complete,5,1,5468,332,7.6231
+5a74760b55429974ef308c03,42,RAIR,answered,Wolfgang Amadeus Mozart,0.0,0.0000,all_gaps_resolved,10,2,7448,443,10.6097
+5a74760b55429974ef308c03,42,KAIR,answered,Wolfgang Amadeus Mozart,0.0,0.0000,agent_complete,5,1,4636,527,10.8163
+5a74760b55429974ef308c03,43,KAIR,answered,Wolfgang Amadeus Mozart,0.0,0.0000,agent_complete,5,1,4720,488,10.4212
+5a74760b55429974ef308c03,43,RAIR,answered,Wolfgang Amadeus Mozart,0.0,0.0000,all_gaps_resolved,10,2,7480,472,10.8831
+5ae22f4e5542996483e6492f,42,KAIR,abstained,,0.0,0.0000,agent_complete,5,1,5145,520,11.2123
+5ae22f4e5542996483e6492f,42,RAIR,abstained,,0.0,0.0000,budget_exhausted,13,4,9942,624,15.0412
+5ae22f4e5542996483e6492f,43,RAIR,abstained,,0.0,0.0000,budget_exhausted,18,4,15708,1206,25.1469
+5ae22f4e5542996483e6492f,43,KAIR,abstained,,0.0,0.0000,agent_complete,9,2,10081,498,13.4048
+5a77aa095542995d83181260,42,RAIR,answered,Pratt & Whitney F100,1.0,1.0000,all_gaps_resolved,10,2,8602,647,13.3337
+5a77aa095542995d83181260,42,KAIR,answered,Pratt & Whitney F100,1.0,1.0000,budget_exhausted,17,4,26247,2248,45.1454
+5a77aa095542995d83181260,43,KAIR,answered,single engine,0.0,0.0000,agent_complete,13,3,18090,1744,33.5922
+5a77aa095542995d83181260,43,RAIR,answered,Pratt & Whitney F100,1.0,1.0000,all_gaps_resolved,10,2,8364,491,11.1747
+5a7c17c95542990527d5544d,42,KAIR,answered,The Offspring,1.0,1.0000,agent_complete,5,1,5884,357,8.1801
+5a7c17c95542990527d5544d,42,RAIR,answered,The Offspring,1.0,1.0000,all_gaps_resolved,6,1,4530,280,6.5946
+5a7c17c95542990527d5544d,43,RAIR,answered,The Offspring,1.0,1.0000,all_gaps_resolved,6,1,4663,248,5.9261
+5a7c17c95542990527d5544d,43,KAIR,answered,The Offspring,1.0,1.0000,agent_complete,5,1,6634,548,11.7358
+5a7d2b5755429907fabef0c2,42,RAIR,abstained,,0.0,0.0000,all_gaps_resolved,6,1,4605,407,8.7617
+5a7d2b5755429907fabef0c2,42,KAIR,answered,Milwaukee Bucks,0.0,0.0000,agent_complete,17,4,25511,1628,38.2134
+5a7d2b5755429907fabef0c2,43,KAIR,answered,Milwaukee Bucks,0.0,0.0000,agent_complete,9,2,12639,867,18.3347
+5a7d2b5755429907fabef0c2,43,RAIR,answered,Milwaukee Bucks,0.0,0.0000,all_gaps_resolved,6,1,4962,403,8.5835
+5a7d41425542997cc2c4743b,42,KAIR,answered,Boeing B-17 Flying Fortress,0.0,0.8889,agent_complete,5,1,5271,498,10.7389
+5a7d41425542997cc2c4743b,42,RAIR,answered,Boeing B-17 Flying Fortress,0.0,0.8889,all_gaps_resolved,14,3,13231,1125,24.9198
+5a7d41425542997cc2c4743b,43,RAIR,answered,Boeing B-17 Flying Fortress,0.0,0.8889,all_gaps_resolved,10,2,8901,708,15.3558
+5a7d41425542997cc2c4743b,43,KAIR,answered,Boeing B-17 Flying Fortress,0.0,0.8889,agent_complete,5,1,5857,515,11.5511
+5a7fc41455429969796c1b51,42,RAIR,answered,2 million,1.0,1.0000,all_gaps_resolved,10,2,7969,568,12.8388
+5a7fc41455429969796c1b51,42,KAIR,answered,2 million,1.0,1.0000,agent_complete,5,1,5217,512,10.8382
+5a7fc41455429969796c1b51,43,KAIR,answered,2 million,1.0,1.0000,agent_complete,9,2,11789,864,19.9305
+5a7fc41455429969796c1b51,43,RAIR,answered,2 million,1.0,1.0000,all_gaps_resolved,10,2,7767,475,11.7026
+5ac3b62b554299741d48a2f6,42,KAIR,answered,The Rural Electrification Act of 1936,0.0,0.7500,budget_exhausted,17,4,24968,2200,48.4483
+5ac3b62b554299741d48a2f6,42,RAIR,answered,The Rural Electrification Act of 1936,0.0,0.7500,all_gaps_resolved,6,1,4832,441,9.8009
+5ac3b62b554299741d48a2f6,43,RAIR,answered,The Rural Electrification Act of 1936,0.0,0.7500,all_gaps_resolved,6,1,5005,561,11.4658
+5ac3b62b554299741d48a2f6,43,KAIR,answered,The Rural Electrification Act of 1936,0.0,0.7500,agent_complete,9,2,12784,1012,21.6767
+5ac397fe554299218029dbe2,42,RAIR,abstained,,0.0,0.0000,budget_exhausted,18,4,15083,578,15.8616
+5ac397fe554299218029dbe2,42,KAIR,answered,Norman,1.0,1.0000,agent_complete,9,2,12646,718,18.6400
+5ac397fe554299218029dbe2,43,KAIR,answered,Norman,1.0,1.0000,budget_exhausted,17,4,27986,2185,49.4017
+5ac397fe554299218029dbe2,43,RAIR,abstained,,0.0,0.0000,repeated_query,9,2,6486,270,7.9903
+5ae5a63c5542992663a4f203,42,KAIR,answered,Geordie,1.0,1.0000,agent_complete,5,1,4964,275,7.2054
+5ae5a63c5542992663a4f203,42,RAIR,answered,Geordie,1.0,1.0000,all_gaps_resolved,14,3,10635,702,16.3383
+5ae5a63c5542992663a4f203,43,RAIR,answered,Geordie,1.0,1.0000,all_gaps_resolved,14,3,10949,700,15.9468
+5ae5a63c5542992663a4f203,43,KAIR,answered,Geordie,1.0,1.0000,agent_complete,5,1,5092,284,7.2339
+5a7b59115542995eb53be923,42,RAIR,answered,Lauri Markkanen,0.0,0.0000,all_gaps_resolved,18,4,17691,1592,34.0172
+5a7b59115542995eb53be923,42,KAIR,answered,Pekka Markkanen,0.0,0.0000,budget_exhausted,15,4,26441,2231,50.2422
+5a7b59115542995eb53be923,43,KAIR,answered,Eero Markkanen,0.0,0.0000,agent_complete,13,3,19803,1507,33.5475
+5a7b59115542995eb53be923,43,RAIR,answered,Lauri Markkanen,0.0,0.0000,budget_exhausted,18,4,17539,1610,35.7274
+5a75441c55429916b01642cf,42,KAIR,answered,247 Cherry,1.0,1.0000,agent_complete,5,1,4811,444,9.5495
+5a75441c55429916b01642cf,42,RAIR,answered,247 Cherry,1.0,1.0000,all_gaps_resolved,10,2,8025,552,12.4814
+5a75441c55429916b01642cf,43,RAIR,answered,15 Penn Plaza,0.0,0.0000,all_gaps_resolved,10,2,8037,573,12.7831
+5a75441c55429916b01642cf,43,KAIR,answered,15 Penn Plaza,0.0,0.0000,agent_complete,9,2,10928,602,14.8164
+5abc030e554299642a094bdc,42,RAIR,answered,1945 to 1951,1.0,1.0000,all_gaps_resolved,17,4,14576,713,18.2940
+5abc030e554299642a094bdc,42,KAIR,answered,1950,0.0,0.0000,agent_complete,5,1,5887,502,10.9773
+5abc030e554299642a094bdc,43,KAIR,abstained,,0.0,0.0000,agent_complete,5,1,5420,484,10.6222
+5abc030e554299642a094bdc,43,RAIR,answered,1945 to 1951,1.0,1.0000,all_gaps_resolved,10,2,8210,551,12.4484
+5a84d4555542992a431d1aac,42,KAIR,answered,Oscar Hammerstein Award for Lifetime Achievement in Musical Theatre,0.0,0.1818,agent_complete,5,1,5580,562,11.7867
+5a84d4555542992a431d1aac,42,RAIR,abstained,,0.0,0.0000,budget_exhausted,18,4,15352,1373,27.7155
+5a84d4555542992a431d1aac,43,RAIR,abstained,,0.0,0.0000,repeated_query,13,3,9868,621,14.6506
+5a84d4555542992a431d1aac,43,KAIR,answered,The Oscar Hammerstein Award for Lifetime Achievement in Musical Theatre,0.0,0.1818,agent_complete,5,1,5546,580,11.8324
+5abc0ac455429959677d6a01,42,RAIR,answered,London,1.0,1.0000,all_gaps_resolved,16,4,11959,680,15.7447
+5abc0ac455429959677d6a01,42,KAIR,answered,London,1.0,1.0000,agent_complete,5,1,5561,461,9.8692
+5abc0ac455429959677d6a01,43,KAIR,answered,London,1.0,1.0000,agent_complete,5,1,5919,497,10.6978
+5abc0ac455429959677d6a01,43,RAIR,answered,London,1.0,1.0000,all_gaps_resolved,13,3,10148,635,14.3999
+5ae1384355429920d5234329,42,KAIR,answered,artist,1.0,1.0000,agent_complete,9,2,11195,999,21.9852
+5ae1384355429920d5234329,42,RAIR,answered,artist,1.0,1.0000,all_gaps_resolved,10,2,7287,560,12.0268
+5ae1384355429920d5234329,43,RAIR,answered,artist,1.0,1.0000,all_gaps_resolved,10,2,7219,532,11.3624
+5ae1384355429920d5234329,43,KAIR,answered,artist,1.0,1.0000,agent_complete,13,3,13877,1390,28.7889
+5ade15f35542997545bbbe47,42,RAIR,abstained,,0.0,0.0000,all_gaps_resolved,6,1,4460,404,8.5713
+5ade15f35542997545bbbe47,42,KAIR,answered,"Katherine Waterston portrayed Chrisann Brennan in the 2015 film ""Steve Jobs"".",0.0,0.3333,agent_complete,5,1,4828,415,8.9418
+5ade15f35542997545bbbe47,43,KAIR,answered,"Katherine Waterston portrayed Chrisann Brennan in the film ""Steve Jobs"".",0.0,0.3636,agent_complete,5,1,5074,374,8.5314
+5ade15f35542997545bbbe47,43,RAIR,answered,"Katherine Waterston portrayed Chrisann Brennan in ""Steve Jobs"" (2015)",0.0,0.3636,all_gaps_resolved,6,1,4473,422,8.7805
+5adf4ba65542992d7e9f931c,42,KAIR,answered,Beauty and the Beast,1.0,1.0000,agent_complete,9,2,13986,872,20.5850
+5adf4ba65542992d7e9f931c,42,RAIR,answered,Beauty and the Beast,1.0,1.0000,all_gaps_resolved,14,3,12901,834,20.0567
+5adf4ba65542992d7e9f931c,43,RAIR,abstained,,0.0,0.0000,budget_exhausted,18,4,16315,861,19.8883
+5adf4ba65542992d7e9f931c,43,KAIR,answered,Beauty and the Beast,1.0,1.0000,agent_complete,13,3,21106,1398,31.8812
+5aba85335542994dbf01992d,42,RAIR,answered,World War II and the American Civil War,0.0,0.0000,all_gaps_resolved,10,2,7494,508,11.3697
+5aba85335542994dbf01992d,42,KAIR,answered,American Civil War and World War II,0.0,0.0000,agent_complete,9,2,14017,899,20.7542
+5aba85335542994dbf01992d,43,KAIR,abstained,,0.0,0.0000,agent_complete,13,3,17641,1573,33.5422
+5aba85335542994dbf01992d,43,RAIR,answered,World War II and the American Civil War,0.0,0.0000,all_gaps_resolved,10,2,7475,454,10.3828
+5a7a103b5542990783324e27,42,KAIR,abstained,,0.0,0.0000,agent_complete,13,3,20672,1857,39.3587
+5a7a103b5542990783324e27,42,RAIR,answered,good kid m.a.d city,0.0,0.0000,budget_exhausted,18,4,16683,1293,27.0800
+5a7a103b5542990783324e27,43,RAIR,answered,"good kid, m.a.ad city",0.0,0.0000,budget_exhausted,12,4,9518,397,10.7732
+5a7a103b5542990783324e27,43,KAIR,abstained,,0.0,0.0000,agent_complete,5,1,5594,537,10.1406
+5a7e801b5542997cc2c47557,42,RAIR,answered,North Holland,1.0,1.0000,all_gaps_resolved,10,2,7448,534,11.8130
+5a7e801b5542997cc2c47557,42,KAIR,answered,North Holland,1.0,1.0000,agent_complete,5,1,5616,500,10.9155
+5a7e801b5542997cc2c47557,43,KAIR,answered,North Holland,1.0,1.0000,agent_complete,5,1,5439,474,9.2446
+5a7e801b5542997cc2c47557,43,RAIR,answered,North Holland,1.0,1.0000,all_gaps_resolved,10,2,7454,556,12.0643
+5ab672165542995eadeeffe0,42,KAIR,answered,Azadirachta,1.0,1.0000,agent_complete,5,1,4842,299,7.4192
+5ab672165542995eadeeffe0,42,RAIR,answered,Azadirachta,1.0,1.0000,all_gaps_resolved,10,2,8266,913,18.3793
+5ab672165542995eadeeffe0,43,RAIR,answered,Azadirachta,1.0,1.0000,all_gaps_resolved,14,3,12164,1205,24.0595
+5ab672165542995eadeeffe0,43,KAIR,answered,Azadirachta,1.0,1.0000,agent_complete,5,1,5771,559,11.7127
+5ae226755542996483e64906,42,RAIR,answered,LNW-80,1.0,1.0000,all_gaps_resolved,14,3,11047,767,16.8048
+5ae226755542996483e64906,42,KAIR,answered,LNW-80,1.0,1.0000,agent_complete,5,1,5791,465,10.1711
+5ae226755542996483e64906,43,KAIR,answered,LNW-80,1.0,1.0000,agent_complete,5,1,5528,376,8.7439
+5ae226755542996483e64906,43,RAIR,answered,LNW-80,1.0,1.0000,budget_exhausted,18,4,15356,1046,23.1860
+5a7f7b3b5542992097ad2f81,42,KAIR,answered,Papa Gino's,1.0,1.0000,agent_complete,5,1,5071,528,11.0049
+5a7f7b3b5542992097ad2f81,42,RAIR,abstained,,0.0,0.0000,repeated_query,14,3,8979,368,9.9434
+5a7f7b3b5542992097ad2f81,43,RAIR,abstained,,0.0,0.0000,budget_exhausted,16,4,11153,471,12.2807
+5a7f7b3b5542992097ad2f81,43,KAIR,answered,Papa Gino's,1.0,1.0000,agent_complete,17,4,28008,2371,52.5587
+5a8b05c855429949d91db46a,42,RAIR,answered,England,1.0,1.0000,all_gaps_resolved,6,1,4124,351,7.3268
+5a8b05c855429949d91db46a,42,KAIR,answered,United Kingdom,0.0,0.0000,agent_complete,5,1,5299,459,9.6778
+5a8b05c855429949d91db46a,43,KAIR,answered,England,1.0,1.0000,agent_complete,9,2,10875,792,17.6955
+5a8b05c855429949d91db46a,43,RAIR,answered,England,1.0,1.0000,all_gaps_resolved,12,3,8286,463,10.9606
+5adc035c554299438c868d04,42,KAIR,answered,Isabella (Belle) Baumfree,1.0,1.0000,agent_complete,9,2,13934,988,25.2668
+5adc035c554299438c868d04,42,RAIR,abstained,,0.0,0.0000,budget_exhausted,12,4,8628,370,10.2340
+5adc035c554299438c868d04,43,RAIR,answered,Isabella (Belle) Baumfree,1.0,1.0000,budget_exhausted,18,4,16536,1471,29.6787
+5adc035c554299438c868d04,43,KAIR,abstained,,0.0,0.0000,agent_complete,5,1,5833,540,11.3396
+5ab9cfe655429970cfb8ebaf,42,RAIR,answered,"January 15, 1975",1.0,1.0000,all_gaps_resolved,15,4,11353,528,13.1506
+5ab9cfe655429970cfb8ebaf,42,KAIR,answered,"January 15, 1975",1.0,1.0000,agent_complete,5,1,5321,432,9.3271
+5ab9cfe655429970cfb8ebaf,43,KAIR,answered,"January 15, 1975",1.0,1.0000,agent_complete,5,1,5290,315,7.0058
+5ab9cfe655429970cfb8ebaf,43,RAIR,abstained,,0.0,0.0000,budget_exhausted,12,4,8069,261,7.5968

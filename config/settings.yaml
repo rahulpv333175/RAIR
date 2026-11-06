@@ -1,0 +1,52 @@
+project:
+  name: "RAIR vs KAIR"
+  seed: 42
+
+llm:
+  provider: "ollama"
+  base_url: "http://127.0.0.1:11434"
+  model: "qwen3.5:4b"
+  num_ctx: 4096
+  num_predict: 512
+  temperature: 0.7
+  think: false
+  keep_alive: "5m"
+  timeout_seconds: 180
+  max_concurrent_requests: 1
+
+retrieval:
+  method: "bm25"
+  corpus_scope: "per_question"
+  top_k: 3
+  web_enabled: false
+
+dataset:
+  name: "hotpotqa"
+  split: "dev"
+  setting: "distractor"
+  path: "data/raw/hotpot_dev_distractor_v1.json"
+
+rair:
+  variant: "role_specialized"
+  max_rounds: 5
+
+kair:
+  variant: "competitive_local"
+  num_agents: 2
+  max_iterations: 2
+  steps_per_iteration: 2
+  temperature: 0.7
+
+paths:
+  raw_data: "data/raw"
+  processed_data: "data/processed"
+  results: "results"
+
+evaluation:
+  sample_size: 4
+  sample_seed: 20261018
+  seeds: [42, 43]
+  exclude_first_n: 20
+  max_retrieval_calls: 4
+  max_llm_calls: 18
+  temperature: 0.7

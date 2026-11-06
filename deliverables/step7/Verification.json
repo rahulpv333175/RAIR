@@ -1,0 +1,135 @@
+{
+  "status": "PASS",
+  "verified_at_utc": "2026-10-27T14:27:42.922007+00:00",
+  "automated_tests": {
+    "command": ".venv/Scripts/python.exe -X utf8 -B -m unittest discover -s tests",
+    "tests_run": 207,
+    "failures": 0,
+    "errors": 0,
+    "elapsed_seconds": 9.922
+  },
+  "checks": {
+    "engine_source_unchanged_from_step5": true,
+    "dashboard_source_unchanged_from_step6": true,
+    "all_600_runs_reaudited_and_rescored": true,
+    "all_resource_limits_checked": true,
+    "no_invalid_source_citations": true,
+    "exposed_question_exclusion_preserved": true,
+    "em_cluster_intervals_recomputed": true,
+    "existing_project_setup_check_passed": true,
+    "delivery_documentation_links_resolve": true
+  },
+  "frozen_hashes": {
+    "config/step5_benchmark.json": "0b613462bfc1a5656c32a59f08671b4f64a58747d0062c03f6086a6e89cd6af3",
+    "results/step5_fresh_benchmark.jsonl": "4104fadcc70d71eaf672b607f09db77b8307db38c0697860d2388296b6410b18",
+    "results/step5_fresh_benchmark.summary.json": "05b36432e34d340d2011e9f57643be82ea16671bf31a34bca6ddf8ad021ce409",
+    "data/raw/hotpot_dev_distractor_v1.json": "4e9ecb5c8d3b719f624d66b60f8d56bf227f03914f5f0753d6fa1b359d7104ea"
+  },
+  "release_date": "2026-10-27",
+  "live_rehearsal": {
+    "status": "PASS",
+    "checked_at_utc": "2026-10-27T14:22:39.936257+00:00",
+    "new_browser_comparisons": 2,
+    "real_engine_runs": 4,
+    "browser_console_warnings_and_errors": [],
+    "cases": [
+      {
+        "case": "complete evidence",
+        "run_id": "44a13943ef58467eb43eaf6ae969f9e0",
+        "question_id": "pipeline-complete",
+        "outputs": {
+          "RAIR": {
+            "status": "answered",
+            "answer": "Nerava",
+            "llm_calls": 10,
+            "retrievals": 2
+          },
+          "KAIR": {
+            "status": "answered",
+            "answer": "Nerava",
+            "llm_calls": 5,
+            "retrievals": 1
+          }
+        },
+        "journal_sha256": "d8b3a99343df5b5f31c0596af85c74971aa938ec53061b513b3457f7cac88ade"
+      },
+      {
+        "case": "missing evidence",
+        "run_id": "53d0b084beee4b4587f692b23487806d",
+        "question_id": "pipeline-missing",
+        "outputs": {
+          "RAIR": {
+            "status": "abstained",
+            "answer": "",
+            "llm_calls": 12,
+            "retrievals": 4
+          },
+          "KAIR": {
+            "status": "abstained",
+            "answer": "",
+            "llm_calls": 17,
+            "retrievals": 4
+          }
+        },
+        "journal_sha256": "14c9496d91d36a76e0574a6e32fc7160ae5580235df943bd42b8fc0f5a1ccab6"
+      }
+    ],
+    "screenshot": "docs/assets/dashboard_step7_missing.png",
+    "benchmark_updated": false
+  },
+  "artifacts": {
+    "pdf_page_counts": {
+      "RAIR_KAIR_Final_Report.pdf": 12,
+      "RAIR_KAIR_Demo_Script.pdf": 3,
+      "RAIR_KAIR_Viva_Questions.pdf": 6,
+      "RAIR_KAIR_Presentation_Final.pdf": 12
+    },
+    "powerpoint_native_application": {
+      "passed": true,
+      "final_sha256": "cf0c6cac949e16224cfd60b0ce3dd4154525306b84eb58153e3800d8517a25b3",
+      "application": "Microsoft PowerPoint",
+      "version": "16.0",
+      "native_chart_edit_resize_save_reopen": true,
+      "slides": 12,
+      "final_presentation_unmodified": true,
+      "values": [
+        0.185,
+        0.405,
+        0.36
+      ]
+    },
+    "presentation_package_and_geometry_passed": true,
+    "native_chart_data_matches_source": true,
+    "screenshot_embedded": true,
+    "external_media_dependencies": false,
+    "visual_review": {
+      "all_12_report_pages": true,
+      "all_3_demo_pages": true,
+      "all_6_viva_pages": true,
+      "all_12_native_powerpoint_slides": true,
+      "repair": "Dashboard screenshot changed from a path reference to embedded PNG bytes after native PowerPoint review."
+    },
+    "rendering": "DOCX PDFs exported by installed Word 16.0 and rasterized through packaged render_docx.py with the Word PDF callback. PowerPoint PDF and PNGs exported by installed PowerPoint 16.0. The bundled PDF exporter was unavailable because a standard-font module was missing."
+  },
+  "limitations": [
+    "One local model and supplied distractor pools.",
+    "RAIR versus KAIR superiority is not established.",
+    "Twelve purposeful failure examples do not estimate root-cause prevalence.",
+    "Publisher blocked the IEEE journal link during final check; prior project verification is retained.",
+    "Other presentation applications and another computer not tested.",
+    "Fill personal cover fields and rehearse before class."
+  ],
+  "delivery_files_sha256": {
+    "Benchmark_Outcome_Census.csv": "e3901818e06a5f5ae5a51caa11a7c469d319c09eaa4cd0d943018c5b7353da16",
+    "RAIR_KAIR_Demo_Script.docx": "039081136c473dfe21e092d0067fb265e620fe3b8dc7ddc0d61e9de0686bfd93",
+    "RAIR_KAIR_Demo_Script.pdf": "a97c89d0120da511a814adc0f15cf4de4ce77beb865cd89595c7d2c1c76ef157",
+    "RAIR_KAIR_Final_Report.docx": "07158215bcfe006f55854c3926ca9ce315580dfa3943ca3db824f15a9022da39",
+    "RAIR_KAIR_Final_Report.pdf": "93f2f71bc3f3c6e803ed5688d805c2c50bd726d2b2e6c72745b5e68865d02acc",
+    "RAIR_KAIR_Presentation_Final.pdf": "12641543b66aaffee9fb407b2309bd1b9c66c6961e4aafe99e381202d168cff0",
+    "RAIR_KAIR_Presentation_Final.pptx": "cf0c6cac949e16224cfd60b0ce3dd4154525306b84eb58153e3800d8517a25b3",
+    "RAIR_KAIR_Viva_Questions.docx": "8f47b377c8a3bc806413ba3b8d7de352bf943e846888c22785b3a18bc33abdef",
+    "RAIR_KAIR_Viva_Questions.pdf": "0f3dd8890dde1d2bcbca4a9c0210076e62e68af43530eef79c207e6e8b9b46cc",
+    "Remaining_Failure_Review.md": "9b7efdda8c84911df34f19fdb7903f90787a046be358f45d4e73dd85ba552441",
+    "START_HERE.md": "59f03bd2c7c4d1cf3074435dc971098ab81e385e088e108e31e417a84881369d"
+  }
+}

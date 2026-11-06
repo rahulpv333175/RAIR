@@ -1,0 +1,45 @@
+Generation mode: built-in image_gen, followed by one image_gen edit.
+Purpose: teacher-facing concept preview, not an implemented dashboard.
+
+Original generation prompt:
+Use case: ui-mockup.
+Create one polished, readable landscape 16:9 presentation image at high resolution, viewed straight on, showing a proposed desktop demo dashboard for a student's research project. It must be suitable for a teacher to understand the final intended output and assess the project's goals. This is a concept interface, NOT a screenshot of an existing application. Use a clean academic visual style: white and very pale gray surfaces, dark navy typography, teal for RAIR, violet for KAIR, crisp understated icons, generous spacing, excellent text legibility. Avoid decorative robots, holograms, photos, excessive gradients, fake logos, arbitrary confidence scores, and invented performance claims.
+
+Top heading exactly: "RAIR vs KAIR"
+Subtitle: "Multi-hop question answering with evidence"
+Clearly visible badge: "Proposed interface • Tested research engine"
+A compact question input strip labeled "Illustrative two-hop example" contains: "In which city was the author of The Glass Orchard born?"
+Small context tag: "Answer using supplied documents"
+
+Two equally weighted main panels:
+LEFT title "RAIR • Role-based pipeline". Show a simple elegant connected workflow:
+"Decompose → Retrieve → Filter → Extract → Verify → Answer"
+Include a small shared-memory motif labeled "Verified facts".
+Answer card text: "Answer: Nerava"
+Under it, exact short supporting evidence:
+"[1] The Glass Orchard was written by Mira Solen."
+"[2] Mira Solen was born in Nerava."
+RIGHT title "KAIR • Competitive agents". Show two agents with private memory, converging into a selector and then answer. Use labels "Agent 1", "Agent 2", "Select proposal".
+Answer card text: "Answer: Nerava"
+Supporting evidence shown as concise labels "[1] The Glass Orchard" and "[2] Mira Solen".
+The two answers and these fictional entities are an illustrative synthetic example, not a claim about a benchmark question. Include a small note below the panels: "Return an answer with citations, or abstain when evidence is insufficient."
+
+Lower third: a separate professional comparison section clearly headed "Actual benchmark results".
+Subheading exactly: "100 fresh questions • 2 seeds • 600 total runs"
+Use a crisp compact table, NOT a decorative imprecise graph. Column labels exactly: "System", "Exact match", "Answer F1", "Abstentions", "Errors".
+Rows exactly:
+"Updated RAIR" | "40.5%" | "47.1%" | "61" | "0"
+"Step 4 RAIR core control" | "18.5%" | "21.9%" | "111" | "24"
+"KAIR" | "36.0%" | "45.5%" | "50" | "3"
+Small precise table footnote: "200 runs per system • Same model, source pools, final policy and budgets"
+A restrained teal result callout reads: "RAIR core improvement: +22.0 percentage points"
+Below it: "95% interval: +15.0 to +29.5 points"
+A clear neutral note reads: "RAIR vs KAIR: superiority is not established"
+Bottom status line: "191 automated tests passed • Steps 1–5 complete"
+Bottom small disclaimer: "Interface concept only; the dashboard is not yet implemented."
+
+Keep all stated numbers and caveats accurate. Use visually clear hierarchy, abundant breathing room, and large readable type. Do not add unrequested features such as web search, deployment, user accounts, model confidence percentages, or claims of perfect factual accuracy.
+
+Final corrective edit prompt:
+Edit this project presentation image with one precise technical correction only: reverse BOTH lower connector arrows around the teal 'Verified facts' memory cylinder in the RAIR panel. The correct flow is Verify → Verified facts → Retrieve. The upper horizontal flow Decompose → Retrieve → Filter → Extract → Verify → Answer must stay unchanged. Currently the lower arrows incorrectly run Retrieve → Verified facts → Verify. Reverse their arrowheads and routing direction so the Verify box feeds the memory cylinder and the memory cylinder feeds back into Retrieve. No raw retrieval may feed the verified memory directly. Preserve every other pixel as closely as possible: all existing text, numbers, layout, colors, answer examples, table data, labels, footer caveats and dimensions. Do not add text, remove caveats, change any score, or redesign the image.
+

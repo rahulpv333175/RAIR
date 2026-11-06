@@ -1,0 +1,201 @@
+question_id,seed,system,status,answer,EM,F1,stop,llm_calls,retrieval_calls,prompt_tokens,output_tokens,seconds
+5adce4f65542992c1e3a2474,42,RAIR,answered,Centers for Medicare & Medicaid Services,0.0,0.9091,all_gaps_resolved,14,3,13475,906,18.8786
+5adce4f65542992c1e3a2474,42,KAIR,answered,CMS,0.0,0.0000,agent_complete,5,1,6444,535,10.4925
+5adce4f65542992c1e3a2474,43,KAIR,answered,CMS,0.0,0.0000,agent_complete,13,3,20103,1411,29.6248
+5adce4f65542992c1e3a2474,43,RAIR,abstained,,0.0,0.0000,budget_exhausted,18,4,18647,1418,29.8205
+5a74d9c555429929fddd84fb,42,KAIR,answered,Verdi,1.0,1.0000,agent_complete,5,1,5332,322,7.3131
+5a74d9c555429929fddd84fb,42,RAIR,answered,Verdi,1.0,1.0000,budget_exhausted,18,4,16009,768,18.2916
+5a74d9c555429929fddd84fb,43,RAIR,answered,Verdi,1.0,1.0000,budget_exhausted,15,3,13017,636,14.7326
+5a74d9c555429929fddd84fb,43,KAIR,answered,Verdi,1.0,1.0000,agent_complete,5,1,5742,462,9.5402
+5a77aa8655429949eeb29f22,42,RAIR,abstained,,0.0,0.0000,budget_exhausted,18,4,15844,748,16.7778
+5a77aa8655429949eeb29f22,42,KAIR,answered,Emilia Fox,1.0,1.0000,agent_complete,5,1,6330,461,9.7772
+5a77aa8655429949eeb29f22,43,KAIR,answered,Emilia Fox,1.0,1.0000,agent_complete,5,1,5959,463,9.8374
+5a77aa8655429949eeb29f22,43,RAIR,answered,Emilia Fox,1.0,1.0000,all_gaps_resolved,14,3,13325,947,20.5185
+5a7b73ad5542997c3ec9718c,42,KAIR,answered,martial arts action films,1.0,1.0000,agent_complete,5,1,5831,320,7.5984
+5a7b73ad5542997c3ec9718c,42,RAIR,answered,martial arts action films,1.0,1.0000,all_gaps_resolved,10,2,9566,615,13.5412
+5a7b73ad5542997c3ec9718c,43,RAIR,answered,martial arts action films,1.0,1.0000,all_gaps_resolved,10,2,10147,614,13.5616
+5a7b73ad5542997c3ec9718c,43,KAIR,answered,martial arts action films,1.0,1.0000,agent_complete,5,1,7166,349,8.4236
+5a839c8b5542996488c2e479,42,RAIR,answered,Attorney General,0.0,0.0000,all_gaps_resolved,6,1,5442,380,8.3550
+5a839c8b5542996488c2e479,42,KAIR,answered,Lord Chancellor of England,1.0,1.0000,agent_complete,5,1,6278,453,9.7202
+5a839c8b5542996488c2e479,43,KAIR,answered,Lord Chancellor of England,1.0,1.0000,agent_complete,9,2,11010,535,13.7029
+5a839c8b5542996488c2e479,43,RAIR,answered,Attorney General,0.0,0.0000,all_gaps_resolved,10,2,8629,587,12.8108
+5a7148685542994082a3e761,42,KAIR,answered,Bart Conner,1.0,1.0000,agent_complete,9,2,11854,1030,21.8788
+5a7148685542994082a3e761,42,RAIR,answered,Bart Conner,1.0,1.0000,budget_exhausted,18,4,16495,954,22.6223
+5a7148685542994082a3e761,43,RAIR,answered,Bart Conner,1.0,1.0000,budget_exhausted,18,4,15428,819,19.2351
+5a7148685542994082a3e761,43,KAIR,answered,Bart Conner,1.0,1.0000,agent_complete,5,1,6183,618,12.2955
+5ac4392e5542997ea680ca32,42,RAIR,answered,yes,1.0,1.0000,all_gaps_resolved,10,2,8846,656,13.8950
+5ac4392e5542997ea680ca32,42,KAIR,answered,yes,1.0,1.0000,agent_complete,5,1,5493,454,9.4810
+5ac4392e5542997ea680ca32,43,KAIR,answered,yes,1.0,1.0000,agent_complete,10,2,10790,942,19.2680
+5ac4392e5542997ea680ca32,43,RAIR,answered,yes,1.0,1.0000,all_gaps_resolved,10,2,9020,738,15.3171
+5a8b544855429950cd6afcae,42,KAIR,answered,The Country Bears,1.0,1.0000,agent_complete,5,1,6762,584,12.1483
+5a8b544855429950cd6afcae,42,RAIR,answered,The Country Bears,1.0,1.0000,all_gaps_resolved,10,2,8472,466,10.7601
+5a8b544855429950cd6afcae,43,RAIR,answered,The Country Bears,1.0,1.0000,all_gaps_resolved,10,2,8439,447,10.1837
+5a8b544855429950cd6afcae,43,KAIR,answered,The Country Bears,1.0,1.0000,agent_complete,9,2,14893,973,22.3001
+5ab2e3a35542991669774124,42,RAIR,answered,having a simple iron boar crest,0.0,0.8889,all_gaps_resolved,6,1,5607,517,10.6619
+5ab2e3a35542991669774124,42,KAIR,answered,an iron boar crest,0.0,0.8571,agent_complete,5,1,5953,514,10.8572
+5ab2e3a35542991669774124,43,KAIR,answered,boar crest,0.0,0.6667,agent_complete,5,1,5893,469,10.4123
+5ab2e3a35542991669774124,43,RAIR,answered,simple iron boar crest,1.0,1.0000,all_gaps_resolved,6,1,5611,491,10.0097
+5a87868c5542996e4f308828,42,KAIR,answered,Gino's Pizza and Spaghetti,1.0,1.0000,agent_complete,9,2,12972,838,18.9286
+5a87868c5542996e4f308828,42,RAIR,answered,Gino's Pizza and Spaghetti,1.0,1.0000,all_gaps_resolved,10,2,8875,585,13.3710
+5a87868c5542996e4f308828,43,RAIR,answered,Gino's Pizza and Spaghetti,1.0,1.0000,all_gaps_resolved,10,2,9507,679,14.4311
+5a87868c5542996e4f308828,43,KAIR,answered,Gino's Pizza and Spaghetti,1.0,1.0000,agent_complete,5,1,6160,508,10.1899
+5ade0a275542997545bbbe2d,42,RAIR,answered,Flatbush Zombies,0.0,0.2222,all_gaps_resolved,6,1,5577,276,6.5579
+5ade0a275542997545bbbe2d,42,KAIR,answered,Flatbush Zombies,0.0,0.2222,agent_complete,5,1,6333,454,9.9400
+5ade0a275542997545bbbe2d,43,KAIR,abstained,,0.0,0.0000,agent_complete,5,1,7567,526,11.5910
+5ade0a275542997545bbbe2d,43,RAIR,answered,Flatbush Zombies,0.0,0.2222,all_gaps_resolved,6,1,5521,245,5.8039
+5a721a7655429971e9dc9271,42,KAIR,answered,Christopher Rich Wilson,0.0,0.8000,agent_complete,5,1,6318,522,11.0284
+5a721a7655429971e9dc9271,42,RAIR,answered,Christopher Rich,1.0,1.0000,all_gaps_resolved,14,3,13799,1033,22.6922
+5a721a7655429971e9dc9271,43,RAIR,answered,Jennifer Ventimilia,0.0,0.0000,all_gaps_resolved,14,3,14375,1080,23.3881
+5a721a7655429971e9dc9271,43,KAIR,abstained,,0.0,0.0000,agent_complete,5,1,6997,392,9.1401
+5adce88b5542992c1e3a249a,42,RAIR,abstained,,0.0,0.0000,budget_exhausted,18,4,17487,1010,23.3900
+5adce88b5542992c1e3a249a,42,KAIR,answered,The Delhi Sultanate,0.0,0.0000,agent_complete,5,1,7378,601,12.6968
+5adce88b5542992c1e3a249a,43,KAIR,answered,Hoysala Empire,0.0,0.0000,agent_complete,13,3,21916,1785,37.6108
+5adce88b5542992c1e3a249a,43,RAIR,answered,320 years,1.0,1.0000,budget_exhausted,18,4,18897,1218,27.7156
+5a7300b85542994cef4bc41a,42,KAIR,answered,India's first dedicated multi-wavelength space observatory,1.0,1.0000,agent_complete,13,3,16933,1404,30.3606
+5a7300b85542994cef4bc41a,42,RAIR,answered,India's first dedicated multi-wavelength space observatory,1.0,1.0000,all_gaps_resolved,6,1,5201,264,6.4438
+5a7300b85542994cef4bc41a,43,RAIR,answered,India's first dedicated multi-wavelength space observatory,1.0,1.0000,all_gaps_resolved,6,1,5151,245,5.9636
+5a7300b85542994cef4bc41a,43,KAIR,answered,India's first dedicated multi-wavelength space observatory,1.0,1.0000,agent_complete,5,1,6179,520,9.8018
+5a7a11c85542996a35c170b4,42,RAIR,answered,Woon Swee Oan's novel series,0.0,0.0000,all_gaps_resolved,6,1,5716,404,8.7277
+5a7a11c85542996a35c170b4,42,KAIR,answered,The Four Great Constables,1.0,1.0000,agent_complete,5,1,6095,493,10.4386
+5a7a11c85542996a35c170b4,43,KAIR,answered,The Four Great Constables,1.0,1.0000,agent_complete,5,1,7137,588,12.3263
+5a7a11c85542996a35c170b4,43,RAIR,answered,Si Da Ming Bu,0.0,0.0000,all_gaps_resolved,6,1,5727,398,7.9405
+5a81d0515542990a1d231ed4,42,KAIR,answered,"Paradise, Nevada",0.0,0.5000,agent_complete,5,1,5424,347,7.7725
+5a81d0515542990a1d231ed4,42,RAIR,answered,Flamingo Las Vegas,0.0,0.4444,all_gaps_resolved,6,1,5332,257,6.4390
+5a81d0515542990a1d231ed4,43,RAIR,answered,"Paradise, Nevada",0.0,0.5000,all_gaps_resolved,14,4,11324,560,13.3658
+5a81d0515542990a1d231ed4,43,KAIR,answered,"Parades, Nevada",0.0,0.2500,agent_complete,9,2,10679,539,12.5677
+5a8720885542991e771816d8,42,RAIR,answered,Siwi,0.0,0.0000,budget_exhausted,17,4,16150,960,22.1473
+5a8720885542991e771816d8,42,KAIR,answered,Siwi,0.0,0.0000,agent_complete,5,1,6432,377,8.7105
+5a8720885542991e771816d8,43,KAIR,answered,Siwi,0.0,0.0000,agent_complete,5,1,7153,618,13.0490
+5a8720885542991e771816d8,43,RAIR,answered,Siwi,0.0,0.0000,all_gaps_resolved,6,1,5695,362,7.9032
+5a7bacf2554299294a54aa8d,42,KAIR,abstained,,0.0,0.0000,agent_complete,5,1,5636,438,9.4286
+5a7bacf2554299294a54aa8d,42,RAIR,abstained,,0.0,0.0000,budget_exhausted,18,4,16705,1606,31.7265
+5a7bacf2554299294a54aa8d,43,RAIR,abstained,,0.0,0.0000,budget_exhausted,18,4,16233,1470,29.4764
+5a7bacf2554299294a54aa8d,43,KAIR,answered,Piedmont Province,0.0,0.0000,agent_complete,5,1,5670,513,10.5868
+5a7e23655542997cc2c47528,42,RAIR,abstained,,0.0,0.0000,all_gaps_resolved,6,1,5214,253,6.0104
+5a7e23655542997cc2c47528,42,KAIR,answered,566,1.0,1.0000,agent_complete,9,2,11713,992,20.9928
+5a7e23655542997cc2c47528,43,KAIR,answered,566,1.0,1.0000,agent_complete,5,1,5995,469,10.1427
+5a7e23655542997cc2c47528,43,RAIR,abstained,,0.0,0.0000,all_gaps_resolved,6,1,5224,232,5.4923
+5a8a39195542992d82986f04,42,KAIR,answered,eBay,0.0,0.6667,agent_complete,5,1,6308,472,10.2287
+5a8a39195542992d82986f04,42,RAIR,answered,eBay,0.0,0.6667,all_gaps_resolved,10,2,9191,707,15.3241
+5a8a39195542992d82986f04,43,RAIR,answered,eBay,0.0,0.6667,all_gaps_resolved,10,2,9143,576,12.7240
+5a8a39195542992d82986f04,43,KAIR,answered,eBay,0.0,0.6667,agent_complete,5,1,5522,257,6.4625
+5ac15de55542991316484afb,42,RAIR,abstained,,0.0,0.0000,budget_exhausted,17,4,14025,696,16.6587
+5ac15de55542991316484afb,42,KAIR,answered,no,1.0,1.0000,budget_exhausted,15,4,19039,1992,40.6149
+5ac15de55542991316484afb,43,KAIR,answered,no,1.0,1.0000,agent_complete,9,2,12233,988,20.8372
+5ac15de55542991316484afb,43,RAIR,answered,no,1.0,1.0000,all_gaps_resolved,10,2,8446,464,10.6579
+5a7b72e15542997c3ec97187,42,KAIR,answered,Food and Agriculture Organization,1.0,1.0000,agent_complete,9,2,14069,1080,23.4196
+5a7b72e15542997c3ec97187,42,RAIR,answered,Food and Agriculture Organization,1.0,1.0000,all_gaps_resolved,6,1,5821,531,10.9313
+5a7b72e15542997c3ec97187,43,RAIR,answered,Food and Agriculture Organization,1.0,1.0000,all_gaps_resolved,6,1,5408,250,6.0211
+5a7b72e15542997c3ec97187,43,KAIR,answered,Food and Agriculture Organization,1.0,1.0000,agent_complete,5,1,5779,337,7.8142
+5a8c6bd55542995e66a475ea,42,RAIR,answered,African,0.0,0.0000,all_gaps_resolved,6,1,5523,365,7.9558
+5a8c6bd55542995e66a475ea,42,KAIR,answered,Afro-Russian,1.0,1.0000,agent_complete,5,1,6285,512,10.7824
+5a8c6bd55542995e66a475ea,43,KAIR,answered,African,0.0,0.0000,agent_complete,5,1,6464,473,10.5744
+5a8c6bd55542995e66a475ea,43,RAIR,answered,Afro-Russian,1.0,1.0000,all_gaps_resolved,6,1,5563,348,7.5938
+5ade908b55429975fa854f13,42,KAIR,answered,DTM (Deutsche Tourenwagen Masters),0.0,0.4000,agent_complete,13,3,23231,1604,35.0983
+5ade908b55429975fa854f13,42,RAIR,answered,the DTM and its successor — the International Touring Car Championship,0.0,0.2000,all_gaps_resolved,10,2,10725,780,17.2149
+5ade908b55429975fa854f13,43,RAIR,answered,touring cars,0.0,0.0000,all_gaps_resolved,10,2,10131,652,14.3665
+5ade908b55429975fa854f13,43,KAIR,answered,DTM (Deutsche Tourenwagen Masters),0.0,0.4000,agent_complete,5,1,7939,533,10.1678
+5a71166d5542994082a3e576,42,RAIR,answered,The Battle of Manila,0.0,0.6667,all_gaps_resolved,10,2,9835,757,16.2979
+5a71166d5542994082a3e576,42,KAIR,answered,The Battle of Manila,0.0,0.6667,agent_complete,9,2,16067,1159,25.3894
+5a71166d5542994082a3e576,43,KAIR,answered,The Battle of Manila (1574),0.0,0.5714,agent_complete,5,1,8249,656,14.0064
+5a71166d5542994082a3e576,43,RAIR,answered,The Battle of Manila,0.0,0.6667,all_gaps_resolved,10,2,9918,766,16.3489
+5a847e805542993344746140,42,KAIR,answered,Skipton Castle,1.0,1.0000,agent_complete,5,1,5985,456,9.6445
+5a847e805542993344746140,42,RAIR,abstained,,0.0,0.0000,budget_exhausted,18,4,15733,794,18.2301
+5a847e805542993344746140,43,RAIR,answered,Skipton Castle,1.0,1.0000,all_gaps_resolved,6,1,5360,297,6.5873
+5a847e805542993344746140,43,KAIR,answered,Skipton Castle,1.0,1.0000,agent_complete,9,2,14533,1019,22.4241
+5ae064985542993d6555eb47,42,RAIR,answered,no,1.0,1.0000,all_gaps_resolved,10,2,8931,471,11.5900
+5ae064985542993d6555eb47,42,KAIR,answered,no,1.0,1.0000,agent_complete,13,3,17949,1120,25.6398
+5ae064985542993d6555eb47,43,KAIR,answered,no,1.0,1.0000,agent_complete,5,1,6584,450,8.8955
+5ae064985542993d6555eb47,43,RAIR,answered,no,1.0,1.0000,all_gaps_resolved,10,2,8923,447,10.6881
+5ae3c1515542992f92d8236a,42,KAIR,answered,Science News,1.0,1.0000,agent_complete,9,2,16813,1259,27.4144
+5ae3c1515542992f92d8236a,42,RAIR,answered,Science News,1.0,1.0000,all_gaps_resolved,10,2,9023,442,10.7701
+5ae3c1515542992f92d8236a,43,RAIR,answered,Science News,1.0,1.0000,all_gaps_resolved,10,2,9013,435,10.2258
+5ae3c1515542992f92d8236a,43,KAIR,answered,Science News,1.0,1.0000,agent_complete,9,2,14655,826,18.9741
+5adf5fa65542993a75d264db,42,RAIR,answered,1963,1.0,1.0000,all_gaps_resolved,10,2,8434,452,10.6977
+5adf5fa65542993a75d264db,42,KAIR,answered,2005,0.0,0.0000,agent_complete,5,1,5198,447,9.3457
+5adf5fa65542993a75d264db,43,KAIR,answered,1963,1.0,1.0000,agent_complete,9,2,10918,714,16.2677
+5adf5fa65542993a75d264db,43,RAIR,answered,1963,1.0,1.0000,all_gaps_resolved,10,2,8360,455,10.5429
+5abae1725542996cc5e49ece,42,KAIR,answered,Kongo,1.0,1.0000,agent_complete,5,1,5958,506,10.7787
+5abae1725542996cc5e49ece,42,RAIR,answered,Kongo,1.0,1.0000,all_gaps_resolved,6,1,5499,269,6.4719
+5abae1725542996cc5e49ece,43,RAIR,answered,Kongo,1.0,1.0000,all_gaps_resolved,6,1,5566,382,8.0825
+5abae1725542996cc5e49ece,43,KAIR,answered,Kongo,1.0,1.0000,agent_complete,5,1,5536,319,7.4219
+5a7136e25542994082a3e67e,42,RAIR,answered,Bosco Wong,0.0,0.8000,all_gaps_resolved,10,2,9848,837,17.4854
+5a7136e25542994082a3e67e,42,KAIR,answered,Bosco Wong,0.0,0.8000,agent_complete,5,1,5949,504,10.5811
+5a7136e25542994082a3e67e,43,KAIR,answered,Bosco Wong,0.0,0.8000,agent_complete,5,1,6393,525,11.0423
+5a7136e25542994082a3e67e,43,RAIR,answered,Bosco Wong,0.0,0.8000,all_gaps_resolved,6,1,5752,493,10.1001
+5a774a9855429972597f14ea,42,KAIR,answered,Marcus Rashford,0.0,0.0000,agent_complete,5,1,6248,488,10.5180
+5a774a9855429972597f14ea,42,RAIR,answered,England,1.0,1.0000,budget_exhausted,18,4,21768,2060,42.4005
+5a774a9855429972597f14ea,43,RAIR,answered,England,1.0,1.0000,all_gaps_resolved,10,2,10335,1090,21.8464
+5a774a9855429972597f14ea,43,KAIR,answered,Marcus Rashford,0.0,0.0000,agent_complete,5,1,6250,479,9.7002
+5ac0d5a1554299294b219025,42,RAIR,answered,Milo Yiannopoulos,1.0,1.0000,all_gaps_resolved,6,1,5618,364,8.1065
+5ac0d5a1554299294b219025,42,KAIR,answered,Milo Yiannopoulos,1.0,1.0000,agent_complete,5,1,6442,458,10.1647
+5ac0d5a1554299294b219025,43,KAIR,answered,Milo Yiannopoulos,1.0,1.0000,agent_complete,5,1,6490,518,10.8938
+5ac0d5a1554299294b219025,43,RAIR,answered,Milo Yiannopoulos,1.0,1.0000,all_gaps_resolved,6,1,5510,361,7.9011
+5aba943c554299232ef4a33e,42,KAIR,answered,yes,1.0,1.0000,agent_complete,13,3,21435,1581,34.6425
+5aba943c554299232ef4a33e,42,RAIR,answered,yes,1.0,1.0000,all_gaps_resolved,10,2,9132,552,12.5795
+5aba943c554299232ef4a33e,43,RAIR,answered,yes,1.0,1.0000,all_gaps_resolved,10,2,9230,565,12.4329
+5aba943c554299232ef4a33e,43,KAIR,answered,yes,1.0,1.0000,agent_complete,5,1,7505,673,12.3458
+5ae760415542997b22f6a708,42,RAIR,answered,Erich Friedrich Wilhelm Ludendorff,1.0,1.0000,all_gaps_resolved,10,2,9143,544,12.6416
+5ae760415542997b22f6a708,42,KAIR,abstained,,0.0,0.0000,agent_complete,5,1,7013,495,10.8837
+5ae760415542997b22f6a708,43,KAIR,abstained,,0.0,0.0000,agent_complete,5,1,8322,589,12.1144
+5ae760415542997b22f6a708,43,RAIR,answered,Erich Friedrich Wilhelm Ludendorff,1.0,1.0000,all_gaps_resolved,14,3,14161,1183,24.3219
+5ae13f3c5542997b2ef7d168,42,KAIR,abstained,,0.0,0.0000,agent_complete,9,2,14573,1000,22.3039
+5ae13f3c5542997b2ef7d168,42,RAIR,answered,the Battle of Britain and the Battle of Malta,1.0,1.0000,all_gaps_resolved,10,2,9097,714,15.4064
+5ae13f3c5542997b2ef7d168,43,RAIR,answered,Battle of Britain and Battle of Malta,1.0,1.0000,budget_exhausted,18,4,16544,1101,24.5517
+5ae13f3c5542997b2ef7d168,43,KAIR,abstained,,0.0,0.0000,agent_complete,7,2,9026,1152,21.7746
+5ab90d8955429916710eb0f1,42,RAIR,answered,Smoothie King Center,1.0,1.0000,all_gaps_resolved,10,2,8564,468,11.2590
+5ab90d8955429916710eb0f1,42,KAIR,answered,Smoothie King Center,1.0,1.0000,agent_complete,5,1,5715,458,9.9830
+5ab90d8955429916710eb0f1,43,KAIR,answered,Smoothie King Center,1.0,1.0000,agent_complete,5,1,5726,391,8.3213
+5ab90d8955429916710eb0f1,43,RAIR,answered,Smoothie King Center,1.0,1.0000,all_gaps_resolved,10,2,8507,454,10.5793
+5ae50c345542993aec5ec11f,42,KAIR,answered,Perri: The Youth of a Squirrel,0.0,0.0000,agent_complete,9,2,11510,1029,21.5814
+5ae50c345542993aec5ec11f,42,RAIR,answered,"Bambi, a Life in the Woods",0.0,0.2000,all_gaps_resolved,6,1,5059,282,6.6309
+5ae50c345542993aec5ec11f,43,RAIR,answered,"Bambi, a Life in the Woods",0.0,0.2000,all_gaps_resolved,6,1,5071,257,5.5158
+5ae50c345542993aec5ec11f,43,KAIR,answered,"Bambi, a Life in the Woods",0.0,0.2000,agent_complete,5,1,5389,440,9.3114
+5abbc96755429931dba1452c,42,RAIR,abstained,,0.0,0.0000,budget_exhausted,13,4,10474,417,10.5889
+5abbc96755429931dba1452c,42,KAIR,abstained,,0.0,0.0000,no_active_agents,12,3,14041,1218,25.7098
+5abbc96755429931dba1452c,43,KAIR,abstained,,0.0,0.0000,agent_complete,13,3,17128,1346,28.3582
+5abbc96755429931dba1452c,43,RAIR,abstained,,0.0,0.0000,budget_exhausted,18,4,15098,843,18.4783
+5a835a265542992ef85e2281,42,KAIR,answered,film,0.0,0.5000,agent_complete,9,2,13157,748,17.7316
+5a835a265542992ef85e2281,42,RAIR,answered,film,0.0,0.5000,all_gaps_resolved,10,2,8711,674,14.0973
+5a835a265542992ef85e2281,43,RAIR,answered,film,0.0,0.5000,all_gaps_resolved,10,2,8537,547,11.7268
+5a835a265542992ef85e2281,43,KAIR,answered,film,0.0,0.5000,budget_exhausted,15,4,22798,1945,40.8936
+5adf51595542993344016c52,42,RAIR,answered,Richard Nixon,1.0,1.0000,all_gaps_resolved,10,2,8923,516,12.1391
+5adf51595542993344016c52,42,KAIR,answered,Gerald Ford,0.0,0.0000,agent_complete,5,1,6992,501,10.9670
+5adf51595542993344016c52,43,KAIR,answered,Richard Nixon,1.0,1.0000,agent_complete,9,2,14102,1020,22.3273
+5adf51595542993344016c52,43,RAIR,answered,Richard Nixon,1.0,1.0000,all_gaps_resolved,18,4,16822,1161,25.1760
+5a80a1b25542992bc0c4a78c,42,KAIR,abstained,,0.0,0.0000,agent_complete,5,1,5401,582,11.4824
+5a80a1b25542992bc0c4a78c,42,RAIR,answered,no,1.0,1.0000,budget_exhausted,18,4,15486,901,20.9040
+5a80a1b25542992bc0c4a78c,43,RAIR,abstained,,0.0,0.0000,budget_exhausted,18,4,15870,1090,23.4729
+5a80a1b25542992bc0c4a78c,43,KAIR,answered,no,1.0,1.0000,agent_complete,5,1,5141,485,9.6521
+5a76f7e855429972597f1404,42,RAIR,answered,Madras Export Processing Zone,1.0,1.0000,budget_exhausted,18,4,17172,1306,27.4670
+5a76f7e855429972597f1404,42,KAIR,answered,The Madras Export Processing Zone,1.0,1.0000,agent_complete,5,1,7449,551,11.9158
+5a76f7e855429972597f1404,43,KAIR,answered,The Madras Export Processing Zone,1.0,1.0000,agent_complete,5,1,7053,457,10.1640
+5a76f7e855429972597f1404,43,RAIR,answered,The Madras Export Processing Zone,1.0,1.0000,all_gaps_resolved,10,2,9441,648,13.7425
+5a8ec3205542995a26add506,42,KAIR,answered,yes,1.0,1.0000,agent_complete,9,2,14044,1047,22.7859
+5a8ec3205542995a26add506,42,RAIR,abstained,,0.0,0.0000,budget_exhausted,18,4,14449,764,18.2830
+5a8ec3205542995a26add506,43,RAIR,abstained,,0.0,0.0000,budget_exhausted,12,4,8773,350,9.2403
+5a8ec3205542995a26add506,43,KAIR,answered,yes,1.0,1.0000,agent_complete,9,2,16070,1001,22.3436
+5ae09ea05542993d6555ebc1,42,RAIR,answered,"Dr. Gräsler, Badearzt",1.0,1.0000,all_gaps_resolved,14,3,12414,936,20.1848
+5ae09ea05542993d6555ebc1,42,KAIR,answered,"Dr. Gräsler, Badearzt",1.0,1.0000,agent_complete,5,1,5144,334,7.6133
+5ae09ea05542993d6555ebc1,43,KAIR,answered,"Dr. Gräsler, Badearzt",1.0,1.0000,agent_complete,5,1,4985,269,5.7611
+5ae09ea05542993d6555ebc1,43,RAIR,answered,"Dr. Gräsler, Badearzt",1.0,1.0000,all_gaps_resolved,10,2,9120,949,18.5095
+5ab416a25542996a3a969f28,42,KAIR,answered,The Danish West Indies,0.0,0.0000,agent_complete,13,3,21015,1887,39.3103
+5ab416a25542996a3a969f28,42,RAIR,answered,the Caribbean,1.0,1.0000,all_gaps_resolved,14,3,13599,927,20.6399
+5ab416a25542996a3a969f28,43,RAIR,answered,Danish West Indies,0.0,0.0000,all_gaps_resolved,6,1,5331,266,6.2925
+5ab416a25542996a3a969f28,43,KAIR,answered,The Danish West Indies,0.0,0.0000,agent_complete,5,1,6925,664,12.2934
+5abdd08d5542991f6610604c,42,RAIR,answered,Guardians of the Galaxy Vol. 2,1.0,1.0000,all_gaps_resolved,14,3,13687,968,21.0377
+5abdd08d5542991f6610604c,42,KAIR,answered,Guardians of the Galaxy Vol. 2,1.0,1.0000,agent_complete,5,1,5078,459,9.4726
+5abdd08d5542991f6610604c,43,KAIR,answered,Guardians of the Galaxy Vol. 2,1.0,1.0000,agent_complete,5,1,5142,532,9.7556
+5abdd08d5542991f6610604c,43,RAIR,answered,Guardians of the Galaxy Vol. 2,1.0,1.0000,all_gaps_resolved,14,3,12529,831,18.2905
+5ab52a255542996a3a96a048,42,KAIR,answered,1994,0.0,0.0000,agent_complete,9,2,14886,1197,25.9195
+5ab52a255542996a3a96a048,42,RAIR,abstained,,0.0,0.0000,budget_exhausted,18,4,17120,1243,26.5845
+5ab52a255542996a3a96a048,43,RAIR,abstained,,0.0,0.0000,budget_exhausted,18,4,17253,1439,29.0801
+5ab52a255542996a3a96a048,43,KAIR,answered,"Lillehammer, Norway",0.0,0.0000,agent_complete,15,4,26538,2008,43.6963
+5ae1465855429920d5234373,42,RAIR,answered,New York Yankees,1.0,1.0000,all_gaps_resolved,10,2,9561,582,13.3486
+5ae1465855429920d5234373,42,KAIR,answered,Alex Rodriguez,0.0,0.0000,agent_complete,5,1,6730,377,8.9468
+5ae1465855429920d5234373,43,KAIR,answered,Alex Rodriguez,0.0,0.0000,agent_complete,13,3,19866,1049,25.2969
+5ae1465855429920d5234373,43,RAIR,abstained,,0.0,0.0000,budget_exhausted,18,4,17546,846,19.5750
+5a7747e15542994aec3b7266,42,KAIR,answered,Lonestar,1.0,1.0000,agent_complete,5,1,6895,413,9.5600
+5a7747e15542994aec3b7266,42,RAIR,answered,Lonestar,1.0,1.0000,all_gaps_resolved,16,4,14201,766,18.4463
+5a7747e15542994aec3b7266,43,RAIR,answered,Lonestar,1.0,1.0000,all_gaps_resolved,13,3,11599,601,14.7770
+5a7747e15542994aec3b7266,43,KAIR,answered,Lonestar,1.0,1.0000,agent_complete,5,1,7495,554,12.0804

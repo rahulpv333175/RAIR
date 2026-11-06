@@ -1,0 +1,201 @@
+question_id,seed,system,status,answer,EM,F1,stop,llm_calls,retrieval_calls,prompt_tokens,output_tokens,seconds
+5a7b220855429931da12c9e5,42,RAIR,answered,Save America's Treasures,0.0,0.0000,all_gaps_resolved,6,1,4798,290,7.9756
+5a7b220855429931da12c9e5,42,KAIR,answered,Save America's Treasures,0.0,0.0000,agent_complete,5,1,5333,524,14.2052
+5a7b220855429931da12c9e5,43,KAIR,answered,Save America's Treasures,0.0,0.0000,agent_complete,17,4,22021,1524,47.6826
+5a7b220855429931da12c9e5,43,RAIR,answered,Save America's Treasures,0.0,0.0000,all_gaps_resolved,6,1,5030,270,10.0793
+5ae4f96755429913cc204551,42,KAIR,abstained,,0.0,0.0000,agent_complete,13,3,18152,1269,39.3352
+5ae4f96755429913cc204551,42,RAIR,answered,1828,0.0,0.0000,budget_exhausted,18,4,15326,986,30.4700
+5ae4f96755429913cc204551,43,RAIR,abstained,,0.0,0.0000,budget_exhausted,18,4,14847,819,26.3668
+5ae4f96755429913cc204551,43,KAIR,abstained,,0.0,0.0000,agent_complete,5,1,5863,369,11.7878
+5ade66f055429939a52fe8a0,42,RAIR,abstained,,0.0,0.0000,budget_exhausted,18,4,16417,1077,32.5174
+5ade66f055429939a52fe8a0,42,KAIR,abstained,,0.0,0.0000,no_active_agents,13,3,12955,1167,37.1062
+5ade66f055429939a52fe8a0,43,KAIR,abstained,,0.0,0.0000,all_agents_stalled,16,3,18789,1263,37.5587
+5ade66f055429939a52fe8a0,43,RAIR,abstained,,0.0,0.0000,budget_exhausted,18,4,15546,797,29.7449
+5ae4758b5542995dadf24342,42,KAIR,answered,José Echegaray,1.0,1.0000,agent_complete,5,1,5247,470,16.2645
+5ae4758b5542995dadf24342,42,RAIR,answered,José Echegaray,1.0,1.0000,all_gaps_resolved,10,2,8479,865,28.3324
+5ae4758b5542995dadf24342,43,RAIR,answered,José Echegaray,1.0,1.0000,budget_exhausted,17,4,16137,1104,36.0847
+5ae4758b5542995dadf24342,43,KAIR,abstained,,0.0,0.0000,agent_complete,10,2,10379,931,31.1049
+5a7ca98f55429935c91b5288,42,RAIR,abstained,,0.0,0.0000,budget_exhausted,18,4,17851,1375,41.3448
+5a7ca98f55429935c91b5288,42,KAIR,answered,Christian,1.0,1.0000,agent_complete,17,4,33254,1730,59.2236
+5a7ca98f55429935c91b5288,43,KAIR,answered,Christianity,0.0,0.0000,agent_complete,9,2,18772,968,31.2204
+5a7ca98f55429935c91b5288,43,RAIR,answered,Christianity,0.0,0.0000,budget_exhausted,18,4,19114,1471,44.3914
+5ae789615542997ec2727695,42,KAIR,abstained,,0.0,0.0000,agent_complete,5,1,5556,389,13.2605
+5ae789615542997ec2727695,42,RAIR,answered,Martha Coolidge,1.0,1.0000,all_gaps_resolved,6,1,4846,280,10.8099
+5ae789615542997ec2727695,43,RAIR,answered,Martha Coolidge,1.0,1.0000,all_gaps_resolved,6,1,4854,260,8.5990
+5ae789615542997ec2727695,43,KAIR,answered,Martha Coolidge,1.0,1.0000,agent_complete,9,2,11051,725,23.9563
+5ac2eec55542990b17b154c1,42,RAIR,answered,Red,0.0,0.0000,all_gaps_resolved,6,1,4686,260,8.8855
+5ac2eec55542990b17b154c1,42,KAIR,answered,2012,0.0,0.5000,agent_complete,5,1,5826,423,12.7480
+5ac2eec55542990b17b154c1,43,KAIR,answered,2012,0.0,0.5000,agent_complete,5,1,5465,329,11.1942
+5ac2eec55542990b17b154c1,43,RAIR,answered,2012,0.0,0.5000,all_gaps_resolved,6,1,4708,243,11.6044
+5a78d35e55429974737f78c3,42,KAIR,answered,Bodyjar,1.0,1.0000,agent_complete,5,1,6190,384,17.8963
+5a78d35e55429974737f78c3,42,RAIR,answered,Bodyjar,1.0,1.0000,all_gaps_resolved,10,2,8734,476,21.0380
+5a78d35e55429974737f78c3,43,RAIR,answered,Bodyjar,1.0,1.0000,all_gaps_resolved,10,2,8757,441,19.2694
+5a78d35e55429974737f78c3,43,KAIR,answered,Bodyjar,1.0,1.0000,agent_complete,5,1,5633,498,15.2100
+5ab3010455429976abd1bc15,42,RAIR,abstained,,0.0,0.0000,budget_exhausted,18,4,15684,1172,33.4606
+5ab3010455429976abd1bc15,42,KAIR,answered,documentaries,0.0,0.0000,agent_complete,5,1,6025,517,17.6620
+5ab3010455429976abd1bc15,43,KAIR,answered,documentary filmmakers,0.0,0.0000,agent_complete,10,2,9758,446,15.5571
+5ab3010455429976abd1bc15,43,RAIR,abstained,,0.0,0.0000,budget_exhausted,18,4,15825,1225,34.1934
+5ac3b40a554299741d48a2e5,42,KAIR,answered,Zenne valley,0.0,0.6667,agent_complete,13,3,17828,1413,44.2321
+5ac3b40a554299741d48a2e5,42,RAIR,abstained,,0.0,0.0000,budget_exhausted,18,4,15212,741,26.2931
+5ac3b40a554299741d48a2e5,43,RAIR,answered,Zenne valley,0.0,0.6667,all_gaps_resolved,10,2,8825,563,18.5520
+5ac3b40a554299741d48a2e5,43,KAIR,answered,Zenne valley,0.0,0.6667,agent_complete,5,1,5676,377,10.1609
+5ac560235542993e66e82396,42,RAIR,answered,filmmaker,0.0,0.0000,all_gaps_resolved,10,2,8378,661,20.3644
+5ac560235542993e66e82396,42,KAIR,answered,actors,0.0,0.0000,agent_complete,5,1,6489,530,14.8112
+5ac560235542993e66e82396,43,KAIR,answered,filmmaker,0.0,0.0000,agent_complete,5,1,6223,349,15.1578
+5ac560235542993e66e82396,43,RAIR,answered,filmmaker,0.0,0.0000,all_gaps_resolved,10,2,8375,749,21.5721
+5a7e04b05542995f4f40238a,42,KAIR,answered,Betfred,0.0,0.0000,agent_complete,9,2,9387,861,22.7921
+5a7e04b05542995f4f40238a,42,RAIR,abstained,,0.0,0.0000,all_gaps_resolved,6,1,4764,343,10.4465
+5a7e04b05542995f4f40238a,43,RAIR,abstained,,0.0,0.0000,all_gaps_resolved,6,1,4784,353,8.3679
+5a7e04b05542995f4f40238a,43,KAIR,abstained,,0.0,0.0000,all_agents_stalled,11,2,9441,844,21.7144
+5ab439f055429942dd415eef,42,RAIR,answered,Albany International Airport,0.0,0.2857,all_gaps_resolved,10,2,8158,458,15.6460
+5ab439f055429942dd415eef,42,KAIR,answered,Albany International Airport,0.0,0.2857,agent_complete,5,1,6029,484,13.1780
+5ab439f055429942dd415eef,43,KAIR,answered,Albany International Airport,0.0,0.2857,agent_complete,5,1,5272,380,11.2187
+5ab439f055429942dd415eef,43,RAIR,answered,Albany International Airport,0.0,0.2857,budget_exhausted,18,4,15437,1118,33.1764
+5a88f180554299206df2b3cc,42,KAIR,answered,the Unification Church,1.0,1.0000,agent_complete,13,3,17244,1156,30.7855
+5a88f180554299206df2b3cc,42,RAIR,answered,The Unification Church,1.0,1.0000,all_gaps_resolved,10,2,8757,506,18.8200
+5a88f180554299206df2b3cc,43,RAIR,answered,The Unification Church,1.0,1.0000,all_gaps_resolved,10,2,8781,591,18.1448
+5a88f180554299206df2b3cc,43,KAIR,answered,the Unification Church,1.0,1.0000,agent_complete,5,1,6361,481,11.6325
+5a7e05ba5542995f4f402392,42,RAIR,answered,The Late Late Show,1.0,1.0000,all_gaps_resolved,6,1,5192,269,7.7551
+5a7e05ba5542995f4f402392,42,KAIR,answered,The Late Late Show,1.0,1.0000,agent_complete,5,1,6258,451,37.0475
+5a7e05ba5542995f4f402392,43,KAIR,answered,The Late Late Show,1.0,1.0000,agent_complete,5,1,6186,442,11.4494
+5a7e05ba5542995f4f402392,43,RAIR,answered,The Late Late Show,1.0,1.0000,all_gaps_resolved,6,1,5244,371,8.7204
+5add596f5542990dbb2f7e4d,42,KAIR,answered,Captain Hans Geering,1.0,1.0000,agent_complete,9,2,11082,825,30.2131
+5add596f5542990dbb2f7e4d,42,RAIR,answered,the archetypal Gestapo Officer Herr Otto Flick,0.0,0.0000,all_gaps_resolved,12,3,10428,756,19.6892
+5add596f5542990dbb2f7e4d,43,RAIR,answered,Herr Otto Flick,0.0,0.0000,all_gaps_resolved,10,2,9044,890,21.0969
+5add596f5542990dbb2f7e4d,43,KAIR,answered,Herr Otto Flick,0.0,0.0000,agent_complete,5,1,5089,435,9.9604
+5ae1fa2b5542997f29b3c1df,42,RAIR,answered,Eminem,1.0,1.0000,all_gaps_resolved,10,2,9142,642,16.7164
+5ae1fa2b5542997f29b3c1df,42,KAIR,answered,Eminem,1.0,1.0000,agent_complete,13,3,18795,1534,33.8745
+5ae1fa2b5542997f29b3c1df,43,KAIR,answered,Eminem,1.0,1.0000,agent_complete,5,1,5807,335,6.6813
+5ae1fa2b5542997f29b3c1df,43,RAIR,answered,Eminem,1.0,1.0000,all_gaps_resolved,6,1,5281,383,8.4948
+5ae1e9fd5542997f29b3c1a1,42,KAIR,answered,John Francis Kelly,1.0,1.0000,agent_complete,5,1,6320,558,12.2067
+5ae1e9fd5542997f29b3c1a1,42,RAIR,answered,John F. Kelly,0.0,0.6667,all_gaps_resolved,10,2,9716,1043,21.2327
+5ae1e9fd5542997f29b3c1a1,43,RAIR,answered,John F. Kelly,0.0,0.6667,all_gaps_resolved,14,3,13165,1094,23.0346
+5ae1e9fd5542997f29b3c1a1,43,KAIR,answered,John F. Kelly,0.0,0.6667,agent_complete,5,1,5873,626,12.4284
+5ae28058554299495565da90,42,RAIR,abstained,,0.0,0.0000,all_gaps_resolved,6,1,4965,238,5.9553
+5ae28058554299495565da90,42,KAIR,abstained,,0.0,0.0000,agent_complete,5,1,6953,595,12.3211
+5ae28058554299495565da90,43,KAIR,answered,1958,1.0,1.0000,agent_complete,9,2,15846,987,22.6796
+5ae28058554299495565da90,43,RAIR,abstained,,0.0,0.0000,all_gaps_resolved,14,3,11463,704,15.5518
+5ab6c63755429953192ad38b,42,KAIR,answered,Germany,0.0,0.0000,agent_complete,5,1,7261,533,11.9785
+5ab6c63755429953192ad38b,42,RAIR,answered,Germany,0.0,0.0000,all_gaps_resolved,10,2,9630,720,15.9685
+5ab6c63755429953192ad38b,43,RAIR,answered,German,1.0,1.0000,all_gaps_resolved,6,1,5527,428,9.2709
+5ab6c63755429953192ad38b,43,KAIR,answered,German,1.0,1.0000,agent_complete,5,1,6902,500,11.0343
+5ac2ed41554299218029db96,42,RAIR,answered,Monstera,1.0,1.0000,all_gaps_resolved,10,2,8241,570,13.0030
+5ac2ed41554299218029db96,42,KAIR,answered,Monstera,1.0,1.0000,agent_complete,5,1,5877,539,11.2512
+5ac2ed41554299218029db96,43,KAIR,answered,Monstera,1.0,1.0000,agent_complete,5,1,4973,310,7.2747
+5ac2ed41554299218029db96,43,RAIR,answered,Monstera,1.0,1.0000,all_gaps_resolved,10,2,7909,452,10.6666
+5ae4818f5542995ad6573d5b,42,KAIR,answered,Pippa,0.0,0.0000,agent_complete,5,1,6551,335,8.6628
+5ae4818f5542995ad6573d5b,42,RAIR,abstained,,0.0,0.0000,all_gaps_resolved,6,1,5415,364,8.5328
+5ae4818f5542995ad6573d5b,43,RAIR,answered,Pippa,0.0,0.0000,all_gaps_resolved,6,1,5463,260,6.3766
+5ae4818f5542995ad6573d5b,43,KAIR,answered,Pippa and Piper,0.0,0.5000,agent_complete,9,2,14327,691,17.2605
+5a8a43eb5542996c9b8d5e82,42,RAIR,answered,Marion,0.0,0.5000,all_gaps_resolved,18,4,17148,1210,27.4413
+5a8a43eb5542996c9b8d5e82,42,KAIR,answered,Marion,0.0,0.5000,agent_complete,5,1,5965,499,10.6282
+5a8a43eb5542996c9b8d5e82,43,KAIR,answered,Marion,0.0,0.5000,agent_complete,5,1,5992,644,11.6760
+5a8a43eb5542996c9b8d5e82,43,RAIR,answered,Marion,0.0,0.5000,all_gaps_resolved,14,3,12928,775,18.0314
+5a7f54665542992097ad2f1a,42,KAIR,answered,the Bow River and the Elbow River,1.0,1.0000,agent_complete,5,1,5436,528,11.0419
+5a7f54665542992097ad2f1a,42,RAIR,abstained,,0.0,0.0000,budget_exhausted,16,4,13278,483,13.9693
+5a7f54665542992097ad2f1a,43,RAIR,abstained,,0.0,0.0000,budget_exhausted,15,4,12041,360,10.6667
+5a7f54665542992097ad2f1a,43,KAIR,abstained,,0.0,0.0000,budget_exhausted,18,4,24867,1980,42.6788
+5a7e05635542995f4f40238f,42,RAIR,abstained,,0.0,0.0000,budget_exhausted,18,4,16682,1390,25.9246
+5a7e05635542995f4f40238f,42,KAIR,answered,January 2016,1.0,1.0000,agent_complete,9,2,12486,976,19.0574
+5a7e05635542995f4f40238f,43,KAIR,abstained,,0.0,0.0000,agent_complete,5,1,6100,559,10.7318
+5a7e05635542995f4f40238f,43,RAIR,abstained,,0.0,0.0000,all_gaps_resolved,10,2,8470,628,12.1170
+5a7320565542991f9a20c61d,42,KAIR,answered,Keith Bostic,1.0,1.0000,budget_exhausted,15,4,21003,2087,39.6986
+5a7320565542991f9a20c61d,42,RAIR,answered,Jerry Glanville,0.0,0.0000,all_gaps_resolved,13,3,11297,521,11.6048
+5a7320565542991f9a20c61d,43,RAIR,answered,Jerry Glanville,0.0,0.0000,all_gaps_resolved,12,3,10421,488,10.5762
+5a7320565542991f9a20c61d,43,KAIR,answered,Jerry Glanville,0.0,0.0000,agent_complete,15,4,21361,2228,41.9483
+5a89fa2655429970aeb701d2,42,RAIR,answered,yes,1.0,1.0000,all_gaps_resolved,10,2,8318,422,9.3967
+5a89fa2655429970aeb701d2,42,KAIR,answered,yes,1.0,1.0000,agent_complete,5,1,5392,445,9.0297
+5a89fa2655429970aeb701d2,43,KAIR,answered,yes,1.0,1.0000,agent_complete,5,1,6410,348,8.0024
+5a89fa2655429970aeb701d2,43,RAIR,abstained,,0.0,0.0000,budget_exhausted,14,4,11230,1102,20.8043
+5a865d11554299211dda2b0d,42,KAIR,answered,Fort Saint Anthony,1.0,1.0000,agent_complete,9,2,12071,808,17.6281
+5a865d11554299211dda2b0d,42,RAIR,answered,Fort Snelling,0.0,0.4000,all_gaps_resolved,6,1,4823,257,5.6501
+5a865d11554299211dda2b0d,43,RAIR,abstained,,0.0,0.0000,budget_exhausted,18,4,15446,1036,20.1729
+5a865d11554299211dda2b0d,43,KAIR,answered,Fort Snelling,0.0,0.4000,agent_complete,5,1,5744,471,9.6353
+5a8bf0835542995d1e6f146b,42,RAIR,answered,Scrappy,0.0,0.0000,all_gaps_resolved,10,2,8634,649,12.9135
+5a8bf0835542995d1e6f146b,42,KAIR,answered,Scrappy,0.0,0.0000,agent_complete,13,3,18893,1367,28.9130
+5a8bf0835542995d1e6f146b,43,KAIR,answered,Scrappy,0.0,0.0000,agent_complete,5,1,6091,451,8.4649
+5a8bf0835542995d1e6f146b,43,RAIR,answered,mockingbird,0.0,0.6667,all_gaps_resolved,18,4,16472,1412,27.3342
+5a74d4f355429974ef308c79,42,KAIR,answered,Charles J. Guiteau,0.0,0.8000,agent_complete,5,1,6805,477,10.2268
+5a74d4f355429974ef308c79,42,RAIR,answered,Charles J. Guiteau,0.0,0.8000,all_gaps_resolved,6,1,4974,256,5.6956
+5a74d4f355429974ef308c79,43,RAIR,abstained,,0.0,0.0000,all_gaps_resolved,6,1,5249,359,7.1604
+5a74d4f355429974ef308c79,43,KAIR,answered,Charles J. Guiteau,0.0,0.8000,agent_complete,5,1,6600,498,10.3491
+5ab9180b5542991b5579f0f3,42,RAIR,answered,South Korea,1.0,1.0000,all_gaps_resolved,6,1,4979,202,4.9302
+5ab9180b5542991b5579f0f3,42,KAIR,answered,South Korea,1.0,1.0000,agent_complete,13,3,16307,1300,27.4953
+5ab9180b5542991b5579f0f3,43,KAIR,answered,South Korea,1.0,1.0000,agent_complete,5,1,5186,319,6.2865
+5ab9180b5542991b5579f0f3,43,RAIR,answered,South Korea,1.0,1.0000,all_gaps_resolved,6,1,5129,351,7.0976
+5ae622495542995703ce8b20,42,KAIR,answered,comedy,1.0,1.0000,agent_complete,5,1,5883,473,9.8708
+5ae622495542995703ce8b20,42,RAIR,answered,Comedy Central sketch-comedy,0.0,0.5000,all_gaps_resolved,10,2,8997,786,15.5530
+5ae622495542995703ce8b20,43,RAIR,answered,comedy,1.0,1.0000,all_gaps_resolved,10,2,9365,798,15.6549
+5ae622495542995703ce8b20,43,KAIR,answered,comedy,1.0,1.0000,agent_complete,5,1,5213,263,6.3896
+5a76394c5542994ccc918725,42,RAIR,answered,1968,1.0,1.0000,all_gaps_resolved,10,2,8059,619,12.3675
+5a76394c5542994ccc918725,42,KAIR,answered,1968,1.0,1.0000,agent_complete,13,3,14655,1057,23.1094
+5a76394c5542994ccc918725,43,KAIR,answered,1969,0.0,0.0000,agent_complete,5,1,4814,285,5.6120
+5a76394c5542994ccc918725,43,RAIR,abstained,,0.0,0.0000,all_gaps_resolved,6,1,4611,222,4.8096
+5ab8627f5542990e739ec8da,42,KAIR,answered,Michael Schumacher,0.0,0.3636,agent_complete,9,2,11428,845,18.5947
+5ab8627f5542990e739ec8da,42,RAIR,answered,Michael Schumacher,0.0,0.3636,budget_exhausted,18,4,15429,938,19.7592
+5ab8627f5542990e739ec8da,43,RAIR,answered,Michael Schumacher,0.0,0.3636,all_gaps_resolved,14,3,12339,909,18.3414
+5ab8627f5542990e739ec8da,43,KAIR,answered,Michael Schumacher,0.0,0.3636,agent_complete,5,1,5834,443,9.4480
+5abf8cc35542990832d3a14e,42,RAIR,answered,21 August 1986,0.0,0.8571,all_gaps_resolved,18,4,17107,1348,27.0613
+5abf8cc35542990832d3a14e,42,KAIR,abstained,,0.0,0.0000,agent_complete,5,1,5473,467,9.6675
+5abf8cc35542990832d3a14e,43,KAIR,abstained,,0.0,0.0000,agent_complete,9,2,12031,766,17.0873
+5abf8cc35542990832d3a14e,43,RAIR,abstained,,0.0,0.0000,budget_exhausted,18,4,14361,922,18.9449
+5a7f669a5542994857a76729,42,KAIR,answered,Sam Stone,0.0,0.0000,agent_complete,5,1,5761,553,11.0744
+5a7f669a5542994857a76729,42,RAIR,abstained,,0.0,0.0000,repeated_query,14,3,11676,826,17.2367
+5a7f669a5542994857a76729,43,RAIR,answered,James Stenbeck,1.0,1.0000,all_gaps_resolved,14,3,12020,893,18.0602
+5a7f669a5542994857a76729,43,KAIR,answered,James Stenbeck,1.0,1.0000,agent_complete,9,2,15051,1233,25.5301
+5ab875bd55429916710eb062,42,RAIR,answered,New York Islanders,1.0,1.0000,all_gaps_resolved,6,1,5143,239,5.6724
+5ab875bd55429916710eb062,42,KAIR,answered,New York Islanders,1.0,1.0000,agent_complete,5,1,5839,474,10.0036
+5ab875bd55429916710eb062,43,KAIR,answered,New York Islanders,1.0,1.0000,agent_complete,5,1,5915,385,8.4216
+5ab875bd55429916710eb062,43,RAIR,answered,New York Islanders,1.0,1.0000,all_gaps_resolved,6,1,5135,238,4.9955
+5a7d93945542990b8f5039b8,42,KAIR,answered,Washington,1.0,1.0000,agent_complete,5,1,6464,377,8.9483
+5a7d93945542990b8f5039b8,42,RAIR,answered,Washington,1.0,1.0000,all_gaps_resolved,6,1,5259,358,7.8116
+5a7d93945542990b8f5039b8,43,RAIR,answered,Washington,1.0,1.0000,all_gaps_resolved,6,1,5082,229,5.3364
+5a7d93945542990b8f5039b8,43,KAIR,answered,Washington,1.0,1.0000,agent_complete,9,2,12534,745,17.0161
+5ae7281c5542991e8301cb69,42,RAIR,abstained,,0.0,0.0000,all_gaps_resolved,9,2,7730,421,9.6835
+5ae7281c5542991e8301cb69,42,KAIR,answered,spiritual,1.0,1.0000,agent_complete,5,1,6862,478,10.3615
+5ae7281c5542991e8301cb69,43,KAIR,answered,"religion, faith, and the soul",0.0,0.0000,agent_complete,5,1,6397,360,7.7895
+5ae7281c5542991e8301cb69,43,RAIR,answered,"The Simpsons' seventh season contains an episode titled ""Bart Sells His Soul"".",0.0,0.0000,all_gaps_resolved,12,3,9988,349,8.7103
+5abecdf45542997719eab5d4,42,KAIR,answered,Polk County,0.0,0.6667,agent_complete,5,1,6269,456,9.8243
+5abecdf45542997719eab5d4,42,RAIR,answered,Polk County,0.0,0.6667,all_gaps_resolved,10,2,8884,586,12.3932
+5abecdf45542997719eab5d4,43,RAIR,answered,Polk County,0.0,0.6667,budget_exhausted,18,4,17058,1257,27.4238
+5abecdf45542997719eab5d4,43,KAIR,answered,Polk County,0.0,0.6667,budget_exhausted,17,4,29847,2147,51.7314
+5a8f791c5542992414482ad9,42,RAIR,answered,touring,0.0,0.0000,budget_exhausted,18,4,14961,724,17.5586
+5a8f791c5542992414482ad9,42,KAIR,answered,touring together,0.0,0.0000,agent_complete,5,1,5138,380,8.4449
+5a8f791c5542992414482ad9,43,KAIR,answered,touring,0.0,0.0000,agent_complete,13,3,15087,1147,25.8804
+5a8f791c5542992414482ad9,43,RAIR,answered,touring,0.0,0.0000,all_gaps_resolved,14,3,12377,945,19.5849
+5a79ea435542996c55b2dc9e,42,KAIR,answered,Rear Adm. J. Edward Snyder,1.0,1.0000,agent_complete,9,2,13617,728,17.8763
+5a79ea435542996c55b2dc9e,42,RAIR,answered,J. Edward Snyder,0.0,0.7500,all_gaps_resolved,10,2,8562,468,10.8416
+5a79ea435542996c55b2dc9e,43,RAIR,answered,J. Edward Snyder,0.0,0.7500,all_gaps_resolved,10,2,8546,496,13.6909
+5a79ea435542996c55b2dc9e,43,KAIR,answered,Rear Adm. J. Edward Snyder,1.0,1.0000,agent_complete,5,1,6051,507,11.3702
+5ab9d02155429970cfb8ebb0,42,RAIR,answered,Subway restaurants,0.0,0.6667,all_gaps_resolved,6,1,5159,348,8.0681
+5ab9d02155429970cfb8ebb0,42,KAIR,answered,Subway restaurants,0.0,0.6667,agent_complete,5,1,5807,435,9.9782
+5ab9d02155429970cfb8ebb0,43,KAIR,answered,Subway restaurants,0.0,0.6667,agent_complete,5,1,6010,473,9.6688
+5ab9d02155429970cfb8ebb0,43,RAIR,answered,Subway restaurants,0.0,0.6667,all_gaps_resolved,14,3,12799,1014,21.7771
+5a865e8a55429960ec39b67a,42,KAIR,answered,yes,1.0,1.0000,agent_complete,5,1,6837,473,11.1861
+5a865e8a55429960ec39b67a,42,RAIR,answered,yes,1.0,1.0000,all_gaps_resolved,10,2,9167,707,15.6844
+5a865e8a55429960ec39b67a,43,RAIR,answered,yes,1.0,1.0000,all_gaps_resolved,14,3,13155,774,17.9221
+5a865e8a55429960ec39b67a,43,KAIR,answered,yes,1.0,1.0000,agent_complete,7,2,9015,1008,20.9858
+5abda6e955429965af743d9b,42,RAIR,answered,South Africa,1.0,1.0000,budget_exhausted,18,4,16359,1155,25.6932
+5abda6e955429965af743d9b,42,KAIR,answered,South Africa,1.0,1.0000,agent_complete,5,1,6549,455,11.0464
+5abda6e955429965af743d9b,43,KAIR,answered,South Africa,1.0,1.0000,agent_complete,5,1,6332,451,10.8728
+5abda6e955429965af743d9b,43,RAIR,answered,South Africa,1.0,1.0000,all_gaps_resolved,10,2,8881,557,12.8910
+5ab506a05542990594ba9cd6,42,KAIR,answered,Sonerila,1.0,1.0000,agent_complete,5,1,4654,288,6.9836
+5ab506a05542990594ba9cd6,42,RAIR,answered,Sonerila,1.0,1.0000,all_gaps_resolved,18,4,14458,828,19.7824
+5ab506a05542990594ba9cd6,43,RAIR,answered,Sonerila,1.0,1.0000,all_gaps_resolved,10,2,8115,608,13.1644
+5ab506a05542990594ba9cd6,43,KAIR,abstained,,0.0,0.0000,all_agents_stalled,16,3,16861,1456,32.4743
+5a74bc1555429929fddd84dd,42,RAIR,answered,Khan Kluay,1.0,1.0000,all_gaps_resolved,14,3,12543,894,20.3291
+5a74bc1555429929fddd84dd,42,KAIR,answered,Khan Kluay,1.0,1.0000,agent_complete,9,2,13691,762,19.8912
+5a74bc1555429929fddd84dd,43,KAIR,abstained,,0.0,0.0000,agent_complete,5,1,5752,288,6.7877
+5a74bc1555429929fddd84dd,43,RAIR,answered,Khan Kluay,1.0,1.0000,all_gaps_resolved,10,2,8614,456,11.0090
+5adf8c375542995534e8c7dd,42,KAIR,abstained,,0.0,0.0000,max_iterations,13,2,18684,1229,27.6463
+5adf8c375542995534e8c7dd,42,RAIR,answered,1972,1.0,1.0000,all_gaps_resolved,10,2,8504,475,11.3000
+5adf8c375542995534e8c7dd,43,RAIR,answered,1972,1.0,1.0000,all_gaps_resolved,10,2,8512,467,10.9868
+5adf8c375542995534e8c7dd,43,KAIR,abstained,,0.0,0.0000,all_agents_stalled,13,2,15871,1136,25.1021
+5abb93275542993f40c73b3c,42,RAIR,answered,Thocmentony,1.0,1.0000,all_gaps_resolved,10,2,8837,738,15.9235
+5abb93275542993f40c73b3c,42,KAIR,answered,Thocmentony,1.0,1.0000,agent_complete,5,1,6062,460,10.3978
+5abb93275542993f40c73b3c,43,KAIR,answered,Thocmentony,1.0,1.0000,agent_complete,5,1,6260,466,10.8242
+5abb93275542993f40c73b3c,43,RAIR,answered,Thocmentony,1.0,1.0000,all_gaps_resolved,14,3,12935,1033,22.6359
+5ae13c5155429920d5234336,42,KAIR,abstained,,0.0,0.0000,agent_complete,5,1,6504,604,13.5865
+5ae13c5155429920d5234336,42,RAIR,abstained,,0.0,0.0000,budget_exhausted,18,4,16700,1179,25.9322
+5ae13c5155429920d5234336,43,RAIR,abstained,,0.0,0.0000,budget_exhausted,18,4,17123,1243,26.7059
+5ae13c5155429920d5234336,43,KAIR,answered,Pacer Edwards,0.0,0.0000,agent_complete,5,1,6853,476,12.5010

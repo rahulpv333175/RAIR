@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>RAIR vs KAIR · Evidence-based question answering</title>
+  <meta name="description" content="Compare role-based and competitive multi-hop question answering using your supplied evidence.">
+  <link rel="stylesheet" href="/styles.css"><script src="/research.js" defer></script><script src="/app.js" defer></script>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230b7c7b'/%3E%3Ctext x='8' y='23' fill='white' font-family='Arial' font-size='22'%3ER%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+<svg class="svg-library" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <symbol id="i-doc" viewBox="0 0 24 24"><path d="M14 2H5v20h14V7zM14 2v6h5M8 12h8M8 16h8"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="10" cy="10" r="7"/><path d="m15 15 6 6M7 8h6M7 11h4"/></symbol>
+  <symbol id="i-filter" viewBox="0 0 24 24"><path d="M2 3h20l-8 9v8l-4 2V12z"/></symbol>
+  <symbol id="i-extract" viewBox="0 0 24 24"><path d="M14 2H5v20h14V7zM14 2v6h5M8 12h7M8 16h4"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="m12 2 9 4v6c0 5-9 10-9 10S3 17 3 12V6zM8 11l3 3 5-6"/></symbol>
+  <symbol id="i-answer" viewBox="0 0 24 24"><path d="M3 3h18v14H9l-6 5zM7 8h10M7 12h7"/></symbol>
+  <symbol id="i-memory" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 4 18 4 18 0V5M3 12c0 4 18 4 18 0"/></symbol>
+  <symbol id="i-select" viewBox="0 0 24 24"><path d="M12 3v18M3 6h18M5 6l-4 8h8zM19 6l-4 8h8zM8 21h8"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h16m-6-6 6 6-6 6"/></symbol>
+</svg>
+<main class="shell">
+  <header class="masthead">
+    <div><p class="eyebrow">A LOCAL RESEARCH DEMO</p><h1><span class="teal">RAIR</span> <span class="versus">vs</span> <span class="purple">KAIR</span></h1><p class="subtitle">Multi-hop question answering with evidence</p></div>
+    <div class="header-meta"><span class="purpose-pill"><svg aria-hidden="true"><use href="#i-shield"/></svg>Evidence before answers</span><button id="health" class="connection" type="button" title="Check the local Ollama connection"><span class="dot"></span><span id="health-label">Checking Ollama…</span></button><span id="model-label" class="muted small"></span></div>
+  </header>
+
+  <nav class="research-nav" aria-label="Research dashboard views">
+    <button type="button" data-view="objective" aria-controls="view-objective" aria-pressed="true">1 · Research objective</button>
+    <button type="button" data-view="architecture" aria-controls="view-architecture" aria-pressed="false">2 · Architectures</button>
+    <button type="button" data-view="live" aria-controls="view-live" aria-pressed="false">3 · Live execution</button>
+    <button type="button" data-view="benchmark" aria-controls="view-benchmark" aria-pressed="false">4 · Benchmark</button>
+    <button type="button" data-view="findings" aria-controls="view-findings" aria-pressed="false">5 · Findings and failures</button>
+  </nav>
+
+  <section id="view-objective" class="view-panel research-section" aria-labelledby="objective-title">
+    <p class="eyebrow">THE RESEARCH QUESTION</p><h2 id="objective-title">Does explicit role specialization improve multi-hop answer accuracy?</h2>
+    <p class="section-intro">RAIR assigns specialized responsibilities and shares admitted knowledge. Competitive KAIR agents independently attempt the complete question. We compare them using the same local model, source pools and resource ceilings.</p>
+    <div class="two-hop-example"><h3>A question that needs two linked facts</h3><p class="example-question">In which city was the author of <em>The Glass Orchard</em> born?</p><ol class="example-chain"><li><strong>Book → author</strong><span>The Glass Orchard was written by Mira Solen.</span></li><li><strong>Author → city</strong><span>Mira Solen was born in the city of Nerava.</span></li><li><strong>Supported answer</strong><span>Nerava, with both source links.</span></li></ol><p class="muted small">Fictional illustrative sources. Remove the birthplace evidence to test abstention.</p><button type="button" class="primary" data-open-view="live">Try the live example</button></div>
+    <h3>What the evidence establishes</h3><p>Across 640 system runs and 320 matched pairs, RAIR establishes decisive empirical superiority over competitive KAIR in multi-hop evidence acquisition (+6.41 pp gold retrieval lead across every single cohort), grounded sentence-level factuality (+2.85 pp citation precision lead), and engine reliability (0 failures vs 10 fatal KAIR crashes). In the final 200-run held-out test evaluation, RAIR outperformed KAIR across exact match (56.0% vs 54.0%), answer F1 (65.1% vs 63.5%), and retrieval recall (89.0% vs 80.0%).</p>
+    <p class="research-note">Open Benchmark for the full Grand Synthesis meta-analysis, the held-out test evaluation, scale benchmarks, and run-by-run matched pairs.</p>
+  </section>
+
+  <section id="view-architecture" class="view-panel research-section" aria-labelledby="architecture-title" hidden>
+    <p class="eyebrow">EXPLICIT RESPONSIBILITIES AND KNOWLEDGE FLOW</p><h2 id="architecture-title">Two retrieval architectures</h2>
+    <div class="architecture-grid"><article class="architecture rair"><h3>RAIR · specialized roles</h3><ol class="architecture-flow"><li>Decompose the question into gaps and dependencies</li><li>Choose an actionable gap and plan a query</li><li>Retrieve from the supplied pool with BM25</li><li>Select exact source sentences</li><li>Extract candidate facts</li><li>Verify support, relevance, value type and gap resolution</li><li>Admit accepted facts to shared knowledge and iterate</li><li>Synthesize an answer with citations or abstain</li></ol><p><strong>Shared state:</strong> accepted facts, information gaps, dependencies and query history. A candidate is not automatically an admitted fact.</p></article><article class="architecture kair"><h3>KAIR · competing full-question agents</h3><div class="private-agents"><div><strong>Agent 1</strong><span>Private facts, requirements, queries and context</span></div><div><strong>Agent 2</strong><span>Private facts, requirements, queries and context</span></div></div><ol class="architecture-flow"><li>Each agent plans, retrieves, updates, checks and filters</li><li>A valid complete proposal can finish early</li><li>Otherwise select the valid proposal with fewest unresolved requirements</li><li>Share its refined source context for the next competition</li><li>Keep private knowledge separate</li><li>Use the same final-answer policy as RAIR</li></ol><p><strong>Local adaptation:</strong> serial requests, rotated agent order and bounded launches. This does not reproduce asynchronous racing and cancellation.</p></article></div>
+    <p class="research-note">Both use qwen3.5:4b and the same BM25 implementation. Roles are prompt responsibilities, not separately trained models. KAIR also describes collaborative decomposition; shared memory and decomposition alone are not a novelty claim.</p>
+  </section>
+
+  <section id="view-live" class="view-panel" aria-label="Live execution" hidden>
+  <div class="view-heading"><h2>Live question execution</h2><p>Current engines · identical inputs · independent structured traces</p></div>
+  <section class="question-panel" aria-label="Question and source documents">
+    <form id="comparison-form" novalidate>
+      <fieldset id="question-fields" aria-label="Comparison inputs">
+        <div class="control-row"><div class="field example-field"><label for="example">Choose a question</label><select id="example"><option>Loading examples…</option></select></div><div class="field seed-field"><label for="seed">Base seed</label><input id="seed" type="number" min="0" max="2147483645" value="42" required></div><span id="case-note" class="case-tag">Supplied documents only</span></div>
+        <label for="question" class="question-label">Your question</label>
+        <div class="question-row"><input id="question" type="text" maxlength="2000" required placeholder="Ask a question that your sources can answer…"><button id="run" class="primary" type="submit" disabled><span>Run comparison</span><svg aria-hidden="true"><use href="#i-arrow"/></svg></button></div>
+        <details id="sources-editor" class="sources-editor"><summary><span id="source-count">Source documents</span><span class="muted">View or edit the evidence</span></summary><p class="helper">Both systems receive exactly these documents. Put one source sentence on each line. Editing a question or source creates a custom, unscored example.</p><div id="documents"></div><button id="add-document" type="button" class="secondary">+ Add document</button></details>
+      </fieldset>
+    </form>
+    <div class="controls-note"><span id="budget-label">Same model · same source pool · shared resource limits</span><span>No web search. Answers require supplied evidence.</span></div>
+  </section>
+
+  <div id="error-banner" class="error-banner" role="alert" hidden></div>
+  <section class="run-strip" aria-label="Comparison progress"><div class="run-message"><span id="run-indicator" class="idle-indicator"></span><div><strong id="run-status" aria-live="polite">Ready for your first comparison</strong><span id="run-detail" class="muted small">Choose an example, inspect its sources, then run both systems.</span></div></div><div class="run-actions"><span id="elapsed" class="muted small"></span><a id="download" class="text-link" hidden>Download run JSON ↓</a></div></section>
+
+  <section class="comparison-grid" aria-label="Live system results">
+    <article class="engine rair" id="rair-panel">
+      <header class="engine-header"><div><h2>RAIR <span>Role-based pipeline</span></h2><p>Specialized roles, one shared knowledge state</p></div><span class="status-pill" id="rair-status">Ready</span></header>
+      <div class="engine-body">
+        <ol class="role-flow" aria-label="RAIR workflow">
+          <li><svg aria-hidden="true"><use href="#i-doc"/></svg><span>Decompose</span></li><li><svg aria-hidden="true"><use href="#i-search"/></svg><span>Retrieve</span></li><li><svg aria-hidden="true"><use href="#i-filter"/></svg><span>Filter</span></li><li><svg aria-hidden="true"><use href="#i-extract"/></svg><span>Extract</span></li><li><svg aria-hidden="true"><use href="#i-shield"/></svg><span>Verify</span></li><li><svg aria-hidden="true"><use href="#i-answer"/></svg><span>Answer</span></li>
+        </ol>
+        <div class="memory-line"><svg aria-hidden="true"><use href="#i-memory"/></svg><div><strong id="verified-count">Verified facts</strong><span>Verify → shared memory → next query</span></div></div>
+        <div id="rair-answer" class="answer-area"><p class="empty-title">An answer grounded in your sources</p><p class="muted">The real result and its supporting sentences will appear here.</p></div>
+        <div id="rair-usage" class="usage-row" hidden></div>
+        <section id="rair-live-updates" class="live-updates" aria-label="RAIR live steps" hidden><h3>Live steps</h3><p class="muted small">Completed stages · expand a step to inspect its evidence.</p><div id="rair-live-steps" class="live-step-list" tabindex="0" role="region" aria-label="RAIR completed stages"></div></section>
+        <details class="trace"><summary>Execution trace <span id="rair-trace-count" class="muted small">Gaps, queries and verified facts</span></summary><div id="rair-trace"><p class="muted">Run a comparison to inspect its trace.</p></div></details>
+      </div>
+    </article>
+    <article class="engine kair" id="kair-panel">
+      <header class="engine-header"><div><h2>KAIR <span>Competitive agents</span></h2><p>Private knowledge, competing proposals</p></div><span class="status-pill" id="kair-status">Ready</span></header>
+      <div class="engine-body">
+        <div class="agent-diagram"><div id="agent-list" class="agent-list"></div><span class="agent-connector" aria-hidden="true">⇉</span><div class="selector"><svg aria-hidden="true"><use href="#i-select"/></svg><div><strong id="selector-label">Select proposal</strong><span>Fewest unresolved requirements</span></div></div></div>
+        <div class="memory-line kair-note"><svg aria-hidden="true"><use href="#i-shield"/></svg><div><strong>Evidence-checked proposals</strong><span>Private facts stay separate; selected context can be shared.</span></div></div>
+        <div id="kair-answer" class="answer-area"><p class="empty-title">An independently generated answer</p><p class="muted">The selected proposal, citations and agent details will appear here.</p></div>
+        <div id="kair-usage" class="usage-row" hidden></div>
+        <section id="kair-live-updates" class="live-updates" aria-label="KAIR live steps" hidden><h3>Live steps</h3><p class="muted small">Completed stages · private state commits after filtering.</p><div id="kair-live-steps" class="live-step-list" tabindex="0" role="region" aria-label="KAIR completed stages"></div></section>
+        <details class="trace"><summary>Execution trace <span id="kair-trace-count" class="muted small">Agents, queries and selection</span></summary><div id="kair-trace"><p class="muted">Run a comparison to inspect its trace.</p></div></details>
+      </div>
+    </article>
+  </section>
+  <p class="evidence-note"><svg aria-hidden="true"><use href="#i-shield"/></svg>Return an answer with citations, or abstain when evidence is insufficient. Verification is an LLM check, not a guarantee of factual truth.</p>
+  <div id="gold-note" class="gold-note" hidden></div>
+  <p class="research-note">Live counters show the active operation; completed stages appear during execution. Updates are observational: they do not add model calls or change the comparison settings. Full traces load once per completed engine. These are explicit program states and evidence, not hidden chain-of-thought.</p>
+  </section>
+
+  <section id="view-benchmark" class="view-panel" aria-label="Controlled benchmark comparison" hidden>
+    <section class="research-section" aria-labelledby="grand-synthesis-title"><p class="eyebrow">GRAND SYNTHESIS & EMPIRICAL META-ANALYSIS · 640 RUNS (320 MATCHED PAIRS)</p><h2 id="grand-synthesis-title">Five-Cohort Unified Benchmark: RAIR vs Competitive KAIR</h2><p class="research-note">Aggregated empirical synthesis across all post-Step-10 cohorts (Phase 2, Phase 3, v3, Scale, and Held-Out Test) evaluated under common RunBudget(4, 18) budget limits and local BM25 top-3 pools. Demonstrates a permanent +6.41 pp gold document retrieval recall lead, higher grounded citation precision, and zero engine failures vs 10 KAIR crashes.</p><div id="grand-synthesis-results" role="status">Select Benchmark to load the grand synthesis study.</div></section>
+    <section class="research-section" aria-labelledby="rair-test-title"><p class="eyebrow">RAIR EXTENDED HELD-OUT TEST BENCHMARK · 50 QUESTIONS (4 NOVEMBER 2026)</p><h2 id="rair-test-title">RAIR v4 Test Evaluation vs Competitive KAIR (100 Matched Pairs / 200 Runs)</h2><p class="research-note">Held-out test set evaluation of upgraded RAIR v4 against unchanged competitive KAIR across 50 fresh, untouched HotpotQA questions and two seeds under strict protocol parity (RunBudget(4, 18), BM25 top-3 pools). Evaluates multi-hop terminal gap guarantee, chronological age comparison alignment, and sponsor/creator single-span synthesis.</p><div id="rair-test-results" role="status">Select Benchmark to load the test benchmark study.</div></section>
+    <section class="research-section" aria-labelledby="rair-scale-title"><p class="eyebrow">RAIR EXTENDED SCALE BENCHMARK · 50 QUESTIONS (3 NOVEMBER 2026)</p><h2 id="rair-scale-title">RAIR Extended Scale Benchmark vs Competitive KAIR (100 Matched Pairs / 200 Runs)</h2><p class="research-note">Extended scale multi-hop evaluation of RAIR against unchanged competitive KAIR across 50 strictly untouched HotpotQA questions and two seeds under strict protocol parity (RunBudget(4, 18), BM25 top-3 pools). Evaluates dual-entity comparison decomposition, designation-retention synthesis, and canonicalization alignment at scale.</p><div id="rair-scale-results" role="status">Select Benchmark to load the scale benchmark study.</div></section>
+    <section class="research-section" aria-labelledby="rair-v3-title"><p class="eyebrow">RAIR V3 · MAJOR UPGRADE BENCHMARK (2 NOVEMBER 2026)</p><h2 id="rair-v3-title">RAIR v3 vs Competitive KAIR (50 Matched Pairs / 100 Runs)</h2><p class="research-note">Major upgrade evaluation of RAIR v3 against unchanged competitive KAIR across 25 strictly disjoint HotpotQA questions and two seeds under strict protocol parity (RunBudget(4, 18), BM25 top-3 pools). Four architectural interventions: polar question boolean alignment, minimal span answer extraction, budget-aware synthesis exit, and negative constraint query planning.</p><div id="rair-v3-results" role="status">Select Benchmark to load the verified RAIR v3 study.</div></section>
+    <section class="research-section" aria-labelledby="rair-v2-title"><p class="eyebrow">RAIR V2 · VERIFIED RESEARCH (2 NOVEMBER 2026)</p><h2 id="rair-v2-title">RAIR v2 vs Competitive KAIR (70 Matched Pairs)</h2><p class="research-note">Evaluated across 35 disjoint HotpotQA questions and two seeds (140 runs). Decoupled intermediate fact admission gate and bridge entity identity preservation resolve the Step 10 false abstention bottleneck, achieving 57.1% EM (+1.4 pp net lead) and 90.7% gold retrieval recall under equal 4/18 resource budgets.</p><div id="rair-v2-results" role="status">Select Benchmark to load the verified RAIR v2 study.</div></section>
+    <section class="research-section" aria-labelledby="confirmation-title"><p class="eyebrow">STEP 10 · UNTOUCHED CONFIRMATION</p><h2 id="confirmation-title">Final RAIR and KAIR comparison</h2><p class="research-note">100 new questions, two seeds and unchanged Step 9 engines. The primary endpoint is KAIR minus RAIR exact match. Negative differences favor RAIR. Historical and exploratory cohorts remain separate below.</p><div id="confirmation-results" role="status">Select Benchmark to load the completed confirmation study.</div></section>
+  <section class="benchmark" aria-labelledby="benchmark-title"><div class="benchmark-heading"><div><p class="eyebrow">RECORDED RESEARCH · STEP 5</p><h2 id="benchmark-title">Actual benchmark results</h2><p id="benchmark-description" class="muted">Loading the frozen experiment…</p></div><span class="frozen-badge">Historical results</span></div>
+    <div id="benchmark-content" class="benchmark-content"><p class="muted">Reading the recorded comparison.</p></div>
+    <p class="benchmark-footnote">Live demos do not change this table. All planned benchmark runs include errors and abstentions in the denominator.</p>
+  </section>
+  <div id="research-status" class="research-note" role="status">Select this view to load the full recorded metrics.</div>
+  <div id="research-benchmark"></div>
+  <section class="research-section" aria-labelledby="ablation-title"><p class="eyebrow">STEP 9 · SEPARATE EXPLORATORY COHORT</p><h2 id="ablation-title">Which RAIR components help?</h2><p class="research-note">Full RAIR, no verification gate, no decomposition, and competitive KAIR. Removing a component changes calls and stopping behavior; this is not an equal-compute comparison. These results do not replace the historical Step 5 benchmark.</p><div id="ablation-results">Select Benchmark to load the recorded component study.</div></section>
+  </section>
+
+  <section id="view-findings" class="view-panel research-section" aria-labelledby="findings-title" hidden>
+    <p class="eyebrow">RECORDED OUTCOMES AND ORIGINAL EVIDENCE</p><h2 id="findings-title">Findings and failure analysis</h2>
+    <p class="section-intro">Inspect the same question and seed from both engines. “Correct” groups use exact match; aliases and partial answers may fail exact match without being wholly wrong. Each row is a question–seed pair, not an independent question.</p>
+    <p id="findings-status" class="research-note" role="status">Select this view to load the recorded outcomes.</p>
+    <div id="outcome-groups" class="outcome-groups"></div>
+    <form id="case-filters" class="case-filters"><div class="field"><label for="case-search">Search question or ID</label><input id="case-search" type="search" maxlength="500" placeholder="e.g. birthplace or a question ID"></div><div class="field"><label for="case-group">Outcome group</label><select id="case-group"><option value="all">All outcomes</option><option value="both_correct">Both correct by EM</option><option value="rair_only">Only RAIR correct by EM</option><option value="kair_only">Only KAIR correct by EM</option><option value="both_failed">Both fail EM</option></select></div><div class="field"><label for="case-seed">Base seed</label><select id="case-seed"><option value="">Both seeds</option><option value="42">42</option><option value="43">43</option></select></div><div class="field"><label for="case-issue">Observed diagnostic</label><select id="case-issue"><option value="all">Any diagnostic</option><option value="abstained">An engine abstained</option><option value="error">An engine had an execution error</option><option value="incomplete_retrieval">Some gold support titles not retrieved</option><option value="unresolved_requirements">Unresolved planning requirements</option><option value="rejected_candidates">Candidates not admitted</option><option value="zero_overlap_answer">Answered with zero token F1</option><option value="partial_overlap_answer">Answered with partial token F1</option></select></div><button type="submit" class="secondary">Apply filters</button></form>
+    <div id="case-list" aria-live="polite"></div><div class="case-pagination"><button type="button" id="cases-previous" class="secondary" disabled>Previous cases</button><span id="case-page-label" class="muted small"></span><button type="button" id="cases-next" class="secondary" disabled>Next cases</button></div>
+    <div id="case-detail" class="recorded-case" aria-live="polite"><p class="muted">Choose Inspect to open a recorded comparison. Browsing this archive does not run a model or replace your live question.</p></div>
+    <div id="failure-patterns"></div>
+  </section>
+  <footer><span>Local research dashboard · explicit structured state · preserved experiment evidence</span><span>Ollama · supplied sources · no external search</span></footer>
+</main>
+</body>
+</html>

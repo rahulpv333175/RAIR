@@ -1,0 +1,78 @@
+project:
+  name: RAIR vs KAIR
+  seed: 42
+llm:
+  provider: ollama
+  base_url: http://127.0.0.1:11434
+  model: qwen3.5:4b
+  num_ctx: 4096
+  num_predict: 512
+  temperature: 0.7
+  think: false
+  keep_alive: 5m
+  timeout_seconds: 180
+  max_concurrent_requests: 1
+retrieval:
+  method: bm25
+  corpus_scope: per_question
+  top_k: 3
+  web_enabled: false
+dataset:
+  name: hotpotqa
+  split: dev
+  setting: distractor
+  path: data/raw/hotpot_dev_distractor_v1.json
+rair:
+  variant: role_specialized
+  max_rounds: 5
+kair:
+  variant: competitive_local
+  num_agents: 2
+  max_iterations: 2
+  steps_per_iteration: 2
+  temperature: 0.7
+paths:
+  raw_data: data/raw
+  processed_data: data/processed
+  results: results
+evaluation:
+  sample_size: 100
+  sample_seed: 20261019
+  seeds:
+  - 42
+  - 43
+  exclude_first_n: 20
+  max_retrieval_calls: 4
+  max_llm_calls: 18
+  temperature: 0.7
+  name: Step 4 untouched benchmark
+  purpose: Prospectively frozen 100-question held-out benchmark of the unchanged Step
+    3 inference systems; primary endpoint paired exact-match difference.
+  exclude_question_ids:
+  - 5a7166395542994082a3e814
+  - 5a75e05c55429976ec32bc5f
+  - 5a7bbb64554299042af8f7cc
+  - 5a7f9cbd5542994857a7677c
+  - 5a8133725542995ce29dcbdb
+  - 5a85b2d95542997b5ce40028
+  - 5a85ea095542994775f606a8
+  - 5a877e5d5542993e715abf7d
+  - 5a87ab905542996e4f3088c1
+  - 5a8a265b5542992d82986ecc
+  - 5a8b57f25542995d1e6f1371
+  - 5a8c7595554299585d9e36b6
+  - 5a8db19d5542994ba4e3dd00
+  - 5a8e3ea95542995a26add48d
+  - 5ab29c24554299449642c932
+  - 5ab3b0bf5542992ade7c6e39
+  - 5ab3e45655429976abd1bcd4
+  - 5ab56e32554299637185c594
+  - 5ab6d09255429954757d337d
+  - 5abd94525542992ac4f382d2
+  - 5adbf0a255429947ff17385a
+  - 5ae0d4c9554299603e418468
+  - 5ae184185542990adbacf7ac
+  - 5ae5c74d554299546bf82f58
+  - 5ae61bfd5542992663a4f261
+  bootstrap_resamples: 10000
+  bootstrap_seed: 20261020

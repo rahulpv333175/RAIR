@@ -1,0 +1,47 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# Local Python virtual environments
+.venv/
+venv/
+ENV/
+env/
+
+# Environment Variables & Secrets
+.env
+.env.*
+
+# Local scratch / test files and binaries
+tools/bin/
+.chart-data-*
+*.log
+
+# Downloaded data and generated experiment outputs
+data/raw/
+data/processed/
+results/
+
+# LaTeX auxiliary files
+*.aux
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.toc
+*.out
+*.nav
+*.snm
+*.vrb
+
+# OS generated files
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Editor / IDE configuration
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace

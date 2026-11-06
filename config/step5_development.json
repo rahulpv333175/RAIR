@@ -1,0 +1,324 @@
+{
+  "schema_version": 1,
+  "created_at_utc": "2026-10-18T15:54:52.801673+00:00",
+  "purpose": "Previously exposed Step 4 failures and positive controls; not an untouched benchmark.",
+  "settings": {
+    "project": {
+      "name": "RAIR vs KAIR",
+      "seed": 42
+    },
+    "llm": {
+      "provider": "ollama",
+      "base_url": "http://127.0.0.1:11434",
+      "model": "qwen3.5:4b",
+      "num_ctx": 4096,
+      "num_predict": 512,
+      "temperature": 0.7,
+      "think": false,
+      "keep_alive": "5m",
+      "timeout_seconds": 180,
+      "max_concurrent_requests": 1
+    },
+    "retrieval": {
+      "method": "bm25",
+      "corpus_scope": "per_question",
+      "top_k": 3,
+      "web_enabled": false
+    },
+    "dataset": {
+      "name": "hotpotqa",
+      "split": "dev",
+      "setting": "distractor",
+      "path": "data/processed/step5_development.json"
+    },
+    "rair": {
+      "variant": "role_specialized",
+      "max_rounds": 5
+    },
+    "kair": {
+      "variant": "competitive_local",
+      "num_agents": 2,
+      "max_iterations": 2,
+      "steps_per_iteration": 2,
+      "temperature": 0.7
+    },
+    "paths": {
+      "raw_data": "data/raw",
+      "processed_data": "data/processed",
+      "results": "results"
+    },
+    "evaluation": {
+      "sample_size": 12,
+      "sample_seed": 20261018,
+      "seeds": [
+        42
+      ],
+      "exclude_first_n": 0,
+      "max_retrieval_calls": 4,
+      "max_llm_calls": 18,
+      "temperature": 0.7,
+      "exclude_question_ids": [],
+      "name": "Step 5 development diagnostics",
+      "purpose": "Previously exposed Step 4 failures and positive controls; not an untouched benchmark."
+    }
+  },
+  "dataset_sha256": "58b7812b6fe9ba5c142251022e48d3afc309b4ae078923b7cf9e4d69b9afa74d",
+  "source_sha256": {
+    "src/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/datasets/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/datasets/hotpotqa.py": "105d39d8be12597483350f74d8f9ecec772c8a23e4880f0be304c2c2b5cf2148",
+    "src/evaluation/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/evaluation/budget.py": "c2098a40666243741bda6977a1ca27ab74c6ee3a1c77decdf34082648a952a65",
+    "src/evaluation/metrics.py": "4e3ebe2c3adea95fd86854fc1d6981b50b847870abe82378c9d1eeefb49bd21a",
+    "src/evaluation/paired.py": "8ac6671b9f400b0788cecd5c9460a7be09a85ff99ee34593803844d7ed12b354",
+    "src/evaluation/uncertainty.py": "f661d85e16082dc82e37d807d8a47b86d3a7c0f0da5622684df778baf6a6e7de",
+    "src/experiments/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/experiments/check_bm25.py": "7bbccbc21d58737edd756a51386cf410b3ed8b1c6ebd9204b95b988db6109979",
+    "src/experiments/check_dataset.py": "67f497dac0af84a8f87ae8d981e228a453cd938ff259618638392303cfda598c",
+    "src/experiments/check_kair_pipeline.py": "bfe5ac38b9c7bf402f144ca119f4a79a07723a62f27c0d38a4b06a98b54fa37e",
+    "src/experiments/check_llm.py": "927647c7c32497146403882c3c9998f5da2e1a68fadd76ce3a12b4ffad3d7170",
+    "src/experiments/check_metrics.py": "41e0450cb62848eaccc63f867e086e932e911a0129d4650d69a5386025cddc93",
+    "src/experiments/check_rair_decomposer.py": "69055b20c31b7538b184e2eeaaf465a10b90819bca787cede23536b1537f5a2e",
+    "src/experiments/check_rair_evidence_filter.py": "d42e22b185abcbcec1c2964438239f474b1c925c1b298886b9eaf90c76b41902",
+    "src/experiments/check_rair_fact_extractor.py": "a5f8dd7d2ffab4003b35f2c5c35f0dd57aab1d36a52b4576bac5b87ce180b662",
+    "src/experiments/check_rair_pipeline.py": "c0d2cab3bccf39dddfc2eb62ca27f667b4a275b04ca6f289890747fea19dc7d8",
+    "src/experiments/check_rair_query_planner.py": "98b46cc2b5433e1df62f56d1239d756278912b2c81a639945f7085c62f947d4b",
+    "src/experiments/check_rair_retrieval_step.py": "4df9c4058c0009269b63ecdb0f54950a625f6ee08b025e88def7d05414f14e86",
+    "src/experiments/check_rair_state.py": "f5e324a3ab43cf82509720639dc6eb16fa97745ccf00b3a585533968890ef289",
+    "src/experiments/check_rair_synthesizer.py": "4aa969304e734d48653a1d7fca942ab291b40d521550e0f158885ed0f0354ca3",
+    "src/experiments/check_rair_verifier.py": "0dcd39a5f78871f09e3e11c2138df2de4b2d68218f482834e38698331e84cb97",
+    "src/experiments/check_setup.py": "cab304af1c4d6f11744adb5710fb8c4280edc986b9686d016effa03401416f91",
+    "src/experiments/compare.py": "e1b3c1ec547dd7549e297c8c37c2745c72999908e11b963665318a80964fe1bd",
+    "src/experiments/run_kair.py": "7343094d614fb74f44825e728e9b8c9d4efba96247db78bde7127abb63828719",
+    "src/experiments/run_rair.py": "a47847259435f7a3d892332636cb86a87365ff263c8371ef50634ad48b2bb5c1",
+    "src/kair/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/kair/agent.py": "cb65e5c34f12b3af5a0c46edc2cbf2779e7fc016353f6ef9fddb361e356eea89",
+    "src/kair/controller.py": "73f0aae473617792c00fd2bb4b1d833e5e7d7f8e2c4017e4038ed65577600043",
+    "src/kair/prompts.py": "2bf661ce4091d30717268b8b31d6c70fbecb4212037c213d6146a16cddce6629",
+    "src/kair/state.py": "248ff285be09c737df87875e5bf50a68f3359b6878f65a5852f257ed1f042056",
+    "src/llm/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/llm/ollama_client.py": "2c89081230fd089c9bffb1d686d769a7efcca0b6ccbcda4273e51e4b22ec9ff3",
+    "src/llm/prompts.py": "dae8355a1c716cd1c17a6ce3e1a9d023eb712d1d820b71464bcd533ca7186ec9",
+    "src/rair/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/rair/controller.py": "ff66e89b1c87164f2f7fad529aca381d8d5cc6139424510c697b331fe142f0d3",
+    "src/rair/decomposer.py": "471aee08240ae6a8c63fd9c2d37d4a642a3badb4f32f18b07bddc93c098c6c94",
+    "src/rair/evidence_filter.py": "9c519681939bdabce8263fc14305eeef9ebc62fdcf38185b07132f33a00d1428",
+    "src/rair/fact_extractor.py": "cc049e622f4a72c0f5f7e08cfd3c8649f4a626571db96dc09f03e2c757f8f53a",
+    "src/rair/query_planner.py": "b3d41a115dd608d7c1a7bac3a6611413bad34083c62307451335d5dbe7ad8897",
+    "src/rair/reference.py": "84f8907bbd385a01e6f0af92d1c0799621ce1ce68ded56363b02729b56d3caae",
+    "src/rair/retrieval_step.py": "bb4ad7e963031c8f863a3d83be434c50827b5fd41f9f4fb22bca2d929c049198",
+    "src/rair/state.py": "2fe733c5b91b71e6140e1b096e236e07c8a35b0b89e39be91c9e1650188d83c3",
+    "src/rair/synthesizer.py": "68a7d75be4d6e0ec5317303bcef48a130806b1f90db822e91695c808e1bec2b0",
+    "src/rair/verifier.py": "6ae0fdd758050be27508a822dd115b50ef874519d12ae21f0356791d57a6b1f6",
+    "src/retrieval/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/retrieval/bm25.py": "6441b21463bb675d461b745c548bbddb801d23f12448c90eae95db5e09525d69",
+    "src/retrieval/document_store.py": "6ce6cfbf8a33e1fe0859888f37f53237baaf7cb9d7c4e2d6376a59c147600802",
+    "src/settings.py": "53bf4406f50c64ee748112c57f20609496ceeb110b3169351404b18c04de0173",
+    "requirements.txt": "475992191448d37ffe397dd001f845e0eed353c292e2599f8e36c6f5b95b63cb"
+  },
+  "excluded_question_ids": [],
+  "questions": [
+    {
+      "question_id": "5a84c6df5542997b5ce3ff61",
+      "input_sha256": "504d68825a16feb6899e941e1bbaf228f5c8cd0b92e97704d70cfc50ad77fcf2"
+    },
+    {
+      "question_id": "5a89ddf25542992e4fca83ff",
+      "input_sha256": "707b9363acf421ce25fb87d1416c86f0288ba451c62a4ed0a958aa453e1e32b9"
+    },
+    {
+      "question_id": "5a7313865542994cef4bc442",
+      "input_sha256": "2d2e0c8e08483a9e3ad968e1b6a2c87aab37a0e2cb3fc19d882278a96b69d4ec"
+    },
+    {
+      "question_id": "5ab5ec0a5542997d4ad1f250",
+      "input_sha256": "cad4a3678d4c1f9a6fe59ff88b3b198e36cef504f195ec0791c193e4188a168f"
+    },
+    {
+      "question_id": "5abe9b095542991f661061ad",
+      "input_sha256": "6174e8a7908485112df05e14951d1ef0e18b3f4d4c20dcf076e025511ead255d"
+    },
+    {
+      "question_id": "5a8b6eba55429950cd6afcfc",
+      "input_sha256": "39048c238eb992aac961a22ce909d130f467de02d9c2d5eb987aafe844b14282"
+    },
+    {
+      "question_id": "5abaf0e055429966062416a3",
+      "input_sha256": "fb90900e213e3bfbb9b304ca0ed6b485912ae207b6c29c7418478a33ff04f024"
+    },
+    {
+      "question_id": "5a7133565542994082a3e65c",
+      "input_sha256": "2320f1d26e64a77aaaad5f4f5a74a5e6c8b97429236bc898c56ec27ebede2d65"
+    },
+    {
+      "question_id": "5a807f6a5542992bc0c4a737",
+      "input_sha256": "0834b9003cf470f65aaf6d383bb2c7dcf8d4313188f694eb3d313bc69f0ebabd"
+    },
+    {
+      "question_id": "5ade28b15542997c77aded83",
+      "input_sha256": "6f5aed7f95ccde58eb0b2159e7b47604d135a696fc4ec5434ab51f31686a825d"
+    },
+    {
+      "question_id": "5a8740ee5542994846c1cd35",
+      "input_sha256": "b072e26336c05c16b476895180651586fe04955fec7778a261defda73af95c59"
+    },
+    {
+      "question_id": "5ade89d855429975fa854ef7",
+      "input_sha256": "6cd54fc04a9dc6c94347a4f7ddb61aca41340064d76f92dd4387813ac9605b9c"
+    }
+  ],
+  "schedule": [
+    {
+      "question_id": "5a84c6df5542997b5ce3ff61",
+      "seed": 42,
+      "system": "RAIR",
+      "position_in_pair": 0
+    },
+    {
+      "question_id": "5a84c6df5542997b5ce3ff61",
+      "seed": 42,
+      "system": "KAIR",
+      "position_in_pair": 1
+    },
+    {
+      "question_id": "5a89ddf25542992e4fca83ff",
+      "seed": 42,
+      "system": "KAIR",
+      "position_in_pair": 0
+    },
+    {
+      "question_id": "5a89ddf25542992e4fca83ff",
+      "seed": 42,
+      "system": "RAIR",
+      "position_in_pair": 1
+    },
+    {
+      "question_id": "5a7313865542994cef4bc442",
+      "seed": 42,
+      "system": "RAIR",
+      "position_in_pair": 0
+    },
+    {
+      "question_id": "5a7313865542994cef4bc442",
+      "seed": 42,
+      "system": "KAIR",
+      "position_in_pair": 1
+    },
+    {
+      "question_id": "5ab5ec0a5542997d4ad1f250",
+      "seed": 42,
+      "system": "KAIR",
+      "position_in_pair": 0
+    },
+    {
+      "question_id": "5ab5ec0a5542997d4ad1f250",
+      "seed": 42,
+      "system": "RAIR",
+      "position_in_pair": 1
+    },
+    {
+      "question_id": "5abe9b095542991f661061ad",
+      "seed": 42,
+      "system": "RAIR",
+      "position_in_pair": 0
+    },
+    {
+      "question_id": "5abe9b095542991f661061ad",
+      "seed": 42,
+      "system": "KAIR",
+      "position_in_pair": 1
+    },
+    {
+      "question_id": "5a8b6eba55429950cd6afcfc",
+      "seed": 42,
+      "system": "KAIR",
+      "position_in_pair": 0
+    },
+    {
+      "question_id": "5a8b6eba55429950cd6afcfc",
+      "seed": 42,
+      "system": "RAIR",
+      "position_in_pair": 1
+    },
+    {
+      "question_id": "5abaf0e055429966062416a3",
+      "seed": 42,
+      "system": "RAIR",
+      "position_in_pair": 0
+    },
+    {
+      "question_id": "5abaf0e055429966062416a3",
+      "seed": 42,
+      "system": "KAIR",
+      "position_in_pair": 1
+    },
+    {
+      "question_id": "5a7133565542994082a3e65c",
+      "seed": 42,
+      "system": "KAIR",
+      "position_in_pair": 0
+    },
+    {
+      "question_id": "5a7133565542994082a3e65c",
+      "seed": 42,
+      "system": "RAIR",
+      "position_in_pair": 1
+    },
+    {
+      "question_id": "5a807f6a5542992bc0c4a737",
+      "seed": 42,
+      "system": "RAIR",
+      "position_in_pair": 0
+    },
+    {
+      "question_id": "5a807f6a5542992bc0c4a737",
+      "seed": 42,
+      "system": "KAIR",
+      "position_in_pair": 1
+    },
+    {
+      "question_id": "5ade28b15542997c77aded83",
+      "seed": 42,
+      "system": "KAIR",
+      "position_in_pair": 0
+    },
+    {
+      "question_id": "5ade28b15542997c77aded83",
+      "seed": 42,
+      "system": "RAIR",
+      "position_in_pair": 1
+    },
+    {
+      "question_id": "5a8740ee5542994846c1cd35",
+      "seed": 42,
+      "system": "RAIR",
+      "position_in_pair": 0
+    },
+    {
+      "question_id": "5a8740ee5542994846c1cd35",
+      "seed": 42,
+      "system": "KAIR",
+      "position_in_pair": 1
+    },
+    {
+      "question_id": "5ade89d855429975fa854ef7",
+      "seed": 42,
+      "system": "KAIR",
+      "position_in_pair": 0
+    },
+    {
+      "question_id": "5ade89d855429975fa854ef7",
+      "seed": 42,
+      "system": "RAIR",
+      "position_in_pair": 1
+    }
+  ],
+  "sampling_policy": {
+    "non_final_temperature": 0.7,
+    "final_temperature": 0.0,
+    "kair_agent_seed_offsets": [
+      0,
+      1
+    ]
+  }
+}

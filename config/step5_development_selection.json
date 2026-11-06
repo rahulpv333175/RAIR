@@ -1,0 +1,23 @@
+{
+  "purpose": "Development only: previously exposed Step 4 questions, selected by prior failure category; never held out.",
+  "buckets": {
+    "validation": [
+      "5ade89d855429975fa854ef7",
+      "5a8740ee5542994846c1cd35",
+      "5ade28b15542997c77aded83",
+      "5a8b6eba55429950cd6afcfc"
+    ],
+    "repeated_empty": [
+      "5abe9b095542991f661061ad",
+      "5a807f6a5542992bc0c4a737",
+      "5ab5ec0a5542997d4ad1f250",
+      "5abaf0e055429966062416a3",
+      "5a84c6df5542997b5ce3ff61",
+      "5a7133565542994082a3e65c"
+    ],
+    "correct_control": [
+      "5a89ddf25542992e4fca83ff",
+      "5a7313865542994cef4bc442"
+    ]
+  }
+}
