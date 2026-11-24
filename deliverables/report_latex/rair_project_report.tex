@@ -40,13 +40,13 @@
 \definecolor{bordergray}{RGB}{180, 185, 195}
 
 % Float control parameters to prevent empty white gaps
-\renewcommand{\topfraction}{0.90}
-\renewcommand{\bottomfraction}{0.85}
-\renewcommand{\textfraction}{0.10}
-\renewcommand{\floatpagefraction}{0.80}
-\setlength{\textfloatsep}{12pt plus 2pt minus 2pt}
-\setlength{\floatsep}{10pt plus 2pt minus 2pt}
-\setlength{\intextsep}{10pt plus 2pt minus 2pt}
+\renewcommand{\topfraction}{0.95}
+\renewcommand{\bottomfraction}{0.95}
+\renewcommand{\textfraction}{0.05}
+\renewcommand{\floatpagefraction}{0.85}
+\setlength{\textfloatsep}{10pt plus 2pt minus 2pt}
+\setlength{\floatsep}{8pt plus 2pt minus 2pt}
+\setlength{\intextsep}{8pt plus 2pt minus 2pt}
 
 % =========================================================================
 % Headings Formatting (As per official guidelines):
@@ -58,7 +58,7 @@
 \titleformat{\chapter}[display]
   {\normalfont\fontsize{16}{20}\selectfont\bfseries\centering}
   {\MakeUppercase{\chaptertitlename}\ \thechapter}
-  {10pt}
+  {8pt}
   {\fontsize{16}{20}\selectfont\bfseries\MakeUppercase}
 
 \titleformat{\section}
@@ -445,15 +445,14 @@ To guarantee that hallucinations and unsupported claims never enter the reasonin
 \begin{equation}
 \mathcal{V}(c, \mathcal{D}_t, g_t) = \prod_{k=1}^5 v_k \in \{0, 1\}
 \end{equation}
-Figure~\ref{fig:verifier_gate} displays the sequential gate architecture of the verifier checkpoint.
+Figure~\ref{fig:verifier_gate} displays the clean, unified gate architecture of the verifier checkpoint.
 
 \begin{figure}[!htbp]
 \centering
 \begin{tikzpicture}[
-    node distance=0.8cm,
-    header/.style={rectangle, rounded corners=4pt, text width=10.2cm, align=center, minimum height=0.75cm, draw=navyblue, fill=codeframe, font=\small\bfseries},
-    box/.style={rectangle, rounded corners=4pt, text width=10.2cm, align=left, draw=navyblue, fill=codebg, inner sep=7pt, font=\footnotesize},
-    decision/.style={rectangle, rounded corners=3pt, text width=4.8cm, align=center, minimum height=0.8cm, font=\scriptsize\bfseries},
+    node distance=0.55cm,
+    header/.style={rectangle, rounded corners=4pt, text width=11.2cm, align=center, minimum height=0.72cm, draw=navyblue, fill=codeframe, font=\small\bfseries},
+    box/.style={rectangle, rounded corners=4pt, text width=11.2cm, align=left, draw=navyblue, fill=codebg, inner sep=8pt, font=\footnotesize},
     arrow/.style={thick, -{Stealth[length=2.5mm]}, draw=navyblue}
 ]
 
@@ -461,7 +460,7 @@ Figure~\ref{fig:verifier_gate} displays the sequential gate architecture of the 
 \node (cand) [header] {Candidate Fact Triple: $c = (\text{subject}, \text{predicate}, \text{object}, \text{doc\_id}, \text{sent\_idx})$};
 
 % 2. The 5-Point Evaluation Engine
-\node (engine) [box, below=0.7cm of cand] {
+\node (engine) [box, below=0.5cm of cand] {
     \textbf{The 5-Point Boolean Verification Contract $\mathcal{V}(c, \mathcal{D}_t, g_t)$}:\\[4pt]
     \textbf{1. $v_1$ (Supported by Evidence):} Entailed verbatim by cited sentence; zero speculation.\\
     \textbf{2. $v_2$ (Relevant to Target Gap):} Directly satisfies the specific target attribute of $g_t$.\\
@@ -470,21 +469,14 @@ Figure~\ref{fig:verifier_gate} displays the sequential gate architecture of the 
     \textbf{5. $v_5$ (Resolves Gap):} Substantively closes current gap or unlocks downstream dependencies.
 };
 
-% 3. Verdict Blocks (Pass / Fail side-by-side)
-\node (pass) [decision, draw=passgreen, fill=codebg, below left=0.7cm and -0.1cm of engine] {
-    \color{passgreen}\textbf{PASS ($\prod_{k=1}^5 v_k = 1$)}\\[2pt]
-    \normalfont\scriptsize Commit to Shared State $\mathcal{K}_t$ as Verified Fact
-};
-
-\node (fail) [decision, draw=kairred, fill=codebg, below right=0.7cm and -0.1cm of engine] {
-    \color{kairred}\textbf{FAIL ($\prod_{k=1}^5 v_k = 0$)}\\[2pt]
-    \normalfont\scriptsize Reject Triple \& Trigger Search Replanning
+% 3. Verdict Decision Banner
+\node (verdict) [header, below=0.5cm of engine, fill=codebg] {
+    \textbf{Gate Verdict: } If $\prod_{k=1}^5 v_k = 1 \implies$ \textcolor{passgreen}{\textbf{COMMIT TO STATE $\mathcal{K}_t$}}; \quad Else $\implies$ \textcolor{kairred}{\textbf{REJECT \& REPLAN}}
 };
 
 % Connecting Arrows
 \draw [arrow] (cand.south) -- node[right, font=\scriptsize\bfseries\color{navyblue}] {Evaluate Contract} (engine.north);
-\draw [arrow] (engine.south) -| (pass.north);
-\draw [arrow] (engine.south) -| (fail.north);
+\draw [arrow] (engine.south) -- (verdict.north);
 
 \end{tikzpicture}
 \caption{The 5-Point Boolean Verification Checkpoint Architecture}
@@ -494,13 +486,15 @@ Figure~\ref{fig:verifier_gate} displays the sequential gate architecture of the 
 
 \section{Decomposer Directed Acyclic Graph (DAG) Formulation}
 \begin{spacing}{1.5}
-Multi-hop questions are structured by the Decomposer as a Directed Acyclic Graph (DAG) $\mathcal{G} = (\mathcal{V}_{\text{gap}}, \mathcal{E}_{\text{dep}})$, where each vertex represents an atomic sub-question and directed edges represent strict dependency constraints. Figure~\ref{fig:dag_example} illustrates this formulation on a typical two-hop query.
+Multi-hop questions are structured by the Decomposer as a Directed Acyclic Graph (DAG) $\mathcal{G} = (\mathcal{V}_{\text{gap}}, \mathcal{E}_{\text{dep}})$, where each vertex represents an atomic sub-question and directed edges represent strict dependency constraints. Unlike unguided debate agents that explore arbitrary document permutations, the Decomposer establishes an explicit topological ordering. 
+
+For every gap $g \in \mathcal{V}_{\text{gap}}$, execution is blocked until all parent prerequisite gaps $\text{Parents}(g)$ have achieved verified resolution in $\mathcal{K}_t$. Figure~\ref{fig:dag_example} illustrates this formulation on a typical two-hop question requiring bridge entity discovery prior to terminal target resolution.
 
 \begin{figure}[!htbp]
 \centering
 \begin{tikzpicture}[
-    node distance=1.6cm,
-    dagblock/.style={rectangle, rounded corners=4pt, text width=9.6cm, align=center, minimum height=1.15cm, draw=navyblue, fill=codebg, font=\small},
+    node distance=1.3cm,
+    dagblock/.style={rectangle, rounded corners=4pt, text width=9.6cm, align=center, minimum height=1.1cm, draw=navyblue, fill=codebg, font=\small},
     edge/.style={thick, -{Stealth[length=2.5mm]}, draw=navyblue}
 ]
 \node (g1) [dagblock] {
@@ -509,7 +503,7 @@ Multi-hop questions are structured by the Decomposer as a Directed Acyclic Graph
     {\footnotesize\color{navyblue}\textbf{Prerequisites:} None \quad $\vert$ \quad \textbf{Status:} Resolved}
 };
 
-\node (g2) [dagblock, below=1.5cm of g1] {
+\node (g2) [dagblock, below=1.4cm of g1] {
     \textbf{Gap 2: Terminal Target Resolution ($g_2$)}\\[2pt]
     \textit{"Identify the birth year of the director found in $g_1$"}\\[2pt]
     {\footnotesize\color{navyblue}\textbf{Prerequisites:} [$g_1$] \quad $\vert$ \quad \textbf{Target Attribute:} Numeric Year}
@@ -523,6 +517,8 @@ Multi-hop questions are structured by the Decomposer as a Directed Acyclic Graph
 \caption{Decomposer Directed Acyclic Graph (DAG) with Terminal Target Constraint}
 \label{fig:dag_example}
 \end{figure}
+
+The topological sort algorithm guarantees that cyclic dependencies are strictly prohibited, ensuring finite execution loops. Furthermore, by binding the terminal gap to the user's primary inquiry, the Decomposer prevents premature termination at intermediate entities.
 \end{spacing}
 
 % -------------------------------------------------------------------------
