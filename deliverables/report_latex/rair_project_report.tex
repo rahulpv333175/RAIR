@@ -96,99 +96,189 @@
 \begin{document}
 
 % =========================================================================
-% 1. COVER PAGE & TITLE PAGE (Strictly One Page as per Appendix 1)
-% Page numbers must start from Introduction onwards at the bottom center.
+% 1. COVER PAGE / TITLE PAGE (Matching Reference Layout, Strictly 1 Page)
 % =========================================================================
 \begin{titlepage}
     \pagenumbering{gobble}
-    \enlargethispage{3.0cm}
+    \enlargethispage{4.0cm}
     \centering
-    \vspace*{-0.6cm}
-    {\fontsize{15}{19}\selectfont \bfseries ROLE-AWARE INFORMATION ROUTING (RAIR) VS. COMPETITIVE MULTI-AGENT SYSTEMS IN MULTI-HOP REASONING\par}
+    \vspace*{-1.0cm}
+    
+    {\fontsize{17}{23}\selectfont \bfseries Role-Aware Information Routing (RAIR) vs.\\Competitive Multi-Agent Systems in\\Multi-Hop Reasoning\par}
+    
+    \vspace{0.8cm}
+    {\fontsize{13}{17}\selectfont \bfseries BACHELOR OF ENGINEERING\par}
+    \vspace{0.15cm}
+    {\fontsize{13}{17}\selectfont \bfseries IN\par}
+    \vspace{0.15cm}
+    {\fontsize{13}{17}\selectfont \bfseries COMPUTER SCIENCE \& ENGINEERING\par}
     
     \vspace{0.65cm}
-    {\fontsize{12}{15}\selectfont A\par}
-    \vspace{0.12cm}
-    {\fontsize{13}{16}\selectfont Project Seminar Report\par}
-    
-    \vspace{0.45cm}
-    {\fontsize{11}{14}\selectfont Submitted in partial fulfillment of the\par}
-    {\fontsize{11}{14}\selectfont Requirements for the Project Seminar of\par}
-    \vspace{0.22cm}
-    {\fontsize{13}{16}\selectfont \bfseries BACHELOR OF ENGINEERING\par}
-    \vspace{0.10cm}
-    {\fontsize{13}{16}\selectfont \bfseries IN\par}
-    \vspace{0.10cm}
-    {\fontsize{13}{16}\selectfont \bfseries COMPUTER SCIENCE \& ENGINEERING\par}
+    {\fontsize{12}{15}\selectfont By\par}
+    \vspace{0.3cm}
+    {\fontsize{12}{16}\selectfont \bfseries A. Hariharnath Reddy\par}
+    {\fontsize{11}{14}\selectfont 1602-23-733-009\par}
+    \vspace{0.25cm}
+    {\fontsize{12}{16}\selectfont \bfseries D. Prabhat Reddy\par}
+    {\fontsize{11}{14}\selectfont 1602-23-733-028\par}
+    \vspace{0.25cm}
+    {\fontsize{12}{16}\selectfont \bfseries P. V. Rahul\par}
+    {\fontsize{11}{14}\selectfont 1602-23-733-064\par}
     
     \vspace{0.55cm}
-    {\fontsize{11}{14}\selectfont By\par}
-    \vspace{0.22cm}
-    {\fontsize{11}{14}\selectfont \bfseries A. HARIHARNATH REDDY \quad (1602-23-733-009)\par}
-    \vspace{0.12cm}
-    {\fontsize{11}{14}\selectfont \bfseries D. PRABHAT REDDY \quad (1602-23-733-028)\par}
-    \vspace{0.12cm}
-    {\fontsize{11}{14}\selectfont \bfseries P. V. RAHUL \quad (1602-23-733-064)\par}
-    
-    \vspace{0.50cm}
     \IfFileExists{logovasv.jpg}{%
-        \includegraphics[height=2.1cm]{logovasv.jpg}%
+        \includegraphics[height=2.3cm]{logovasv.jpg}%
     }{%
-        \fbox{\parbox[c][1.9cm][c]{1.9cm}{\centering \footnotesize [College Logo]}}%
+        \fbox{\parbox[c][2.1cm][c]{2.1cm}{\centering \footnotesize [College Logo]}}%
     }\par
     
-    \vspace{0.50cm}
-    {\fontsize{12}{15}\selectfont \bfseries Department of Computer Science \& Engineering\par}
-    \vspace{0.10cm}
-    {\fontsize{12}{15}\selectfont \bfseries Vasavi College of Engineering (Autonomous)\par}
-    \vspace{0.10cm}
-    {\fontsize{11}{14}\selectfont \bfseries (Affiliated to Osmania University)\par}
-    \vspace{0.10cm}
-    {\fontsize{11}{14}\selectfont \bfseries Ibrahimbagh, Hyderabad-31\par}
-    \vspace{0.20cm}
-    {\fontsize{12}{15}\selectfont \bfseries 2026\par}
+    \vspace{0.55cm}
+    {\fontsize{12}{16}\selectfont \bfseries Department of Computer Science \& Engineering\par}
+    \vspace{0.12cm}
+    {\fontsize{12}{16}\selectfont \bfseries Vasavi College of Engineering (Autonomous)\par}
+    \vspace{0.12cm}
+    {\fontsize{11}{14}\selectfont (Affiliated to Osmania University)\par}
+    \vspace{0.12cm}
+    {\fontsize{11}{14}\selectfont Ibrahimbagh, Hyderabad -- 31\par}
+    \vspace{0.25cm}
+    {\fontsize{12}{16}\selectfont \bfseries 2026\par}
 \end{titlepage}
 
 % =========================================================================
-% PRE-INTRODUCTION SECTION (Arrangement of Contents):
-% Table of Contents, List of Tables, List of Figures, Abstract
+% FRONT MATTER: Roman Page Numbering starts here
 % =========================================================================
 \pagenumbering{roman}
-\setcounter{page}{1}
+\setcounter{page}{2}
 
-% Table of Contents (Strictly One Page Guaranteed via compact chapter spacing)
-\clearpage
-\begingroup
-\enlargethispage{6cm}
-\makeatletter
-\renewcommand*\l@chapter[2]{%
-  \ifnum \c@tocdepth >\m@ne
-    \addpenalty{-\@highpenalty}%
-    \vskip 2pt \@plus\p@
-    \setlength\@tempdima{1.5em}%
-    \begingroup
-      \parindent \z@ \rightskip \@pnumwidth
-      \parfillskip -\@pnumwidth
-      \leavevmode \bfseries
-      \advance\leftskip\@tempdima
-      \hskip -\leftskip
-      #1\nobreak\hfil \nobreak\hb@xt@\@pnumwidth{\hss #2}\par
-      \penalty\@highpenalty
-    \endgroup
-  \fi}
-\makeatother
-\linespread{0.96}\selectfont
-\tableofcontents
-\endgroup
+% =========================================================================
+% 2. BONAFIDE CERTIFICATE (Matching Official Reference Template)
+% =========================================================================
+\begin{center}
+{\fontsize{12}{16}\selectfont \bfseries Vasavi College of Engineering (Autonomous)\par}
+\vspace{0.1cm}
+{\fontsize{11}{15}\selectfont \bfseries (Affiliated to Osmania University)\par}
+\vspace{0.1cm}
+{\fontsize{11}{15}\selectfont \bfseries Ibrahimbagh, Hyderabad -- 31\par}
+\vspace{0.1cm}
+{\fontsize{12}{16}\selectfont \bfseries Department of Computer Science \& Engineering\par}
+
+\vspace{0.35cm}
+\IfFileExists{logovasv.jpg}{%
+    \includegraphics[height=2.1cm]{logovasv.jpg}%
+}{%
+    \fbox{\parbox[c][1.9cm][c]{1.9cm}{\centering \footnotesize [College Logo]}}%
+}\par
+
+\vspace{0.45cm}
+{\fontsize{16}{20}\selectfont \bfseries Bonafide Certificate\par}
+\end{center}
+\addcontentsline{toc}{chapter}{Bonafide Certificate}
+
+\vspace{0.4cm}
+\begin{spacing}{1.4}
+\noindent This is to certify that the work, which is being presented in the project seminar report, entitled \textbf{Role-Aware Information Routing (RAIR) vs. Competitive Multi-Agent Systems in Multi-Hop Reasoning}, is a record of authentic work carried out by \textbf{A. Hariharnath Reddy (1602-23-733-009)}, \textbf{D. Prabhat Reddy (1602-23-733-028)}, and \textbf{P. V. Rahul (1602-23-733-064)}, in partial fulfillment of the requirements for the award of the Degree of \textbf{Bachelor of Engineering in Computer Science \& Engineering}, Vasavi College of Engineering (Autonomous), Ibrahimbagh, Hyderabad -- 31.
+
+\vspace{0.35cm}
+\noindent I further certify that this project is a bonafide record of the students' work, carried out under my guidance, and meets the standards required for this project seminar.
+\end{spacing}
+
+\vspace{1.8cm}
+\noindent
+\begin{minipage}[b]{0.45\textwidth}
+  \textbf{S. Swetha}\\[3pt]
+  Assistant Professor\\
+  Dept. of CSE
+\end{minipage}
+\hfill
+\begin{minipage}[b]{0.50\textwidth}
+  \raggedleft
+  \textbf{Dr. T. Adilakshmi}\\[3pt]
+  Professor \& Director\\
+  Dept. of CSE\\[1.5cm]
+  \textbf{Dr. Nagaratna P. Hedge}\\[3pt]
+  Professor \& HoD\\
+  Dept. of CSE
+\end{minipage}
+
 \clearpage
 
-\listoftables
+% =========================================================================
+% 3. DECLARATION BY THE CANDIDATE
+% =========================================================================
+\begin{center}
+\IfFileExists{logovasv.jpg}{%
+    \includegraphics[height=1.9cm]{logovasv.jpg}%
+}{%
+    \fbox{\parbox[c][1.7cm][c]{1.7cm}{\centering \footnotesize [College Logo]}}%
+}\par
+
+\vspace{0.25cm}
+{\fontsize{12}{15}\selectfont \bfseries Department of Computer Science \& Engineering\par}
+{\fontsize{12}{15}\selectfont \bfseries Vasavi College of Engineering (Autonomous)\par}
+{\fontsize{11}{14}\selectfont \bfseries (Affiliated to Osmania University)\par}
+{\fontsize{11}{14}\selectfont \bfseries Ibrahimbagh, Hyderabad -- 31\par}
+
+\vspace{0.25cm}
+{\fontsize{12}{15}\selectfont \bfseries 2025 -- 2026\par}
+
+\vspace{0.45cm}
+{\fontsize{16}{20}\selectfont \bfseries Declaration\par}
+\end{center}
+\addcontentsline{toc}{chapter}{Declaration by the Candidate}
+
+\vspace{0.4cm}
+\begin{spacing}{1.45}
+\noindent We hereby declare that the work presented in this project seminar report entitled \textbf{``Role-Aware Information Routing (RAIR) vs. Competitive Multi-Agent Systems in Multi-Hop Reasoning''} is an authentic record of our own work carried out under the supervision of \textbf{S. Swetha}, Assistant Professor, Department of Computer Science \& Engineering, Vasavi College of Engineering (Autonomous), Hyderabad.
+
+\vspace{0.4cm}
+\noindent The matter presented in this report has not been submitted for the award of any other degree or diploma to any University or Institution.
+\end{spacing}
+
+\vspace{2.5cm}
+\noindent
+\begin{tabular}{@{}ll@{}}
+\textbf{A. Hariharnath Reddy} & Roll No.\ 1602-23-733-009 \\[8pt]
+\textbf{D. Prabhat Reddy}    & Roll No.\ 1602-23-733-028 \\[8pt]
+\textbf{P. V. Rahul}         & Roll No.\ 1602-23-733-064 \\
+\end{tabular}
+
 \clearpage
 
-\listoffigures
+% =========================================================================
+% 4. ACKNOWLEDGEMENT
+% =========================================================================
+\chapter*{Acknowledgement}
+\addcontentsline{toc}{chapter}{Acknowledgement}
+
+\begin{spacing}{1.45}
+\noindent We take this opportunity with pride and immense gratitude to express our sincere thanks to our respected guide, \textbf{S. Swetha}, Assistant Professor, Department of Computer Science and Engineering, Vasavi College of Engineering, for her valuable guidance, continuous support, and constructive suggestions, which made the successful completion of our project possible.
+
+\vspace{0.4cm}
+\noindent We are also deeply grateful to \textbf{Dr. T. Adilakshmi}, Professor \& Director, and \textbf{Dr. Nagaratna P. Hedge}, Professor \& Head of the Department, Department of Computer Science and Engineering, Vasavi College of Engineering, for their encouragement and the academic environment they have fostered within the department.
+
+\vspace{0.4cm}
+\noindent We are grateful to the Department of Computer Science \& Engineering, Vasavi College of Engineering, for providing us with the necessary academic environment and resources to carry out this project.
+
+\vspace{0.4cm}
+\noindent We also express our heartfelt thanks to the management of Vasavi College of Engineering for providing the required facilities and infrastructure to successfully complete this work.
+
+\vspace{0.4cm}
+\noindent Finally, we would like to thank all the faculty members, friends, and well-wishers who have directly or indirectly supported us throughout the course of this project.
+\end{spacing}
+
+\vspace{2.0cm}
+\noindent
+\begin{flushright}
+\textbf{A. Hariharnath Reddy} (1602-23-733-009)\\[4pt]
+\textbf{D. Prabhat Reddy} (1602-23-733-028)\\[4pt]
+\textbf{P. V. Rahul} (1602-23-733-064)
+\end{flushright}
+
 \clearpage
 
-% Abstract
+% =========================================================================
+% 5. ABSTRACT
+% =========================================================================
 \chapter*{ABSTRACT}
 \addcontentsline{toc}{chapter}{Abstract}
 \begin{spacing}{1.5}
@@ -201,7 +291,31 @@ Under a frozen protocol parity framework enforcing identical budget limits (maxi
 \clearpage
 
 % =========================================================================
-% MAIN BODY (Page numbers MUST start from Introduction onwards at the bottom center)
+% 6. TABLE OF CONTENTS (Elaborated naturally across 2 full balanced pages)
+% =========================================================================
+\clearpage
+\begingroup
+\onehalfspacing
+\tableofcontents
+\endgroup
+\clearpage
+
+% =========================================================================
+% 7. LIST OF TABLES
+% =========================================================================
+\listoftables
+\addcontentsline{toc}{chapter}{List of Tables}
+\clearpage
+
+% =========================================================================
+% 8. LIST OF FIGURES
+% =========================================================================
+\listoffigures
+\addcontentsline{toc}{chapter}{List of Figures}
+\clearpage
+
+% =========================================================================
+% MAIN BODY: Page numbers MUST start from Introduction onwards at bottom center
 % =========================================================================
 \pagenumbering{arabic}
 \setcounter{page}{1}
@@ -520,6 +634,9 @@ For every gap $g \in \mathcal{V}_{\text{gap}}$, execution is blocked until all p
 
 The topological sort algorithm guarantees that cyclic dependencies are strictly prohibited, ensuring finite execution loops. Furthermore, by binding the terminal gap to the user's primary inquiry, the Decomposer prevents premature termination at intermediate entities.
 \end{spacing}
+
+% Balanced 2-Page Table of Contents: Forces clean page break before Chapter 4
+\addtocontents{toc}{\protect\pagebreak}
 
 % -------------------------------------------------------------------------
 % CHAPTER 4: PSEUDO ALGORITHM / IMPLEMENTATION
