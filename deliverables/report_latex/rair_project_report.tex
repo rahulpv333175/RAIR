@@ -450,25 +450,42 @@ Figure~\ref{fig:verifier_gate} displays the sequential gate architecture of the 
 \begin{figure}[!htbp]
 \centering
 \begin{tikzpicture}[
-    node distance=0.70cm,
-    gate/.style={rectangle, rounded corners=3pt, text width=9.8cm, align=left, minimum height=0.62cm, draw=navyblue, fill=codebg, font=\scriptsize},
-    header/.style={rectangle, rounded corners=4pt, text width=9.8cm, align=center, minimum height=0.72cm, draw=navyblue, fill=codeframe, font=\footnotesize\bfseries},
-    arrow/.style={thick, -{Stealth[length=2.2mm]}, draw=navyblue}
+    node distance=0.8cm,
+    header/.style={rectangle, rounded corners=4pt, text width=10.2cm, align=center, minimum height=0.75cm, draw=navyblue, fill=codeframe, font=\small\bfseries},
+    box/.style={rectangle, rounded corners=4pt, text width=10.2cm, align=left, draw=navyblue, fill=codebg, inner sep=7pt, font=\footnotesize},
+    decision/.style={rectangle, rounded corners=3pt, text width=4.8cm, align=center, minimum height=0.8cm, font=\scriptsize\bfseries},
+    arrow/.style={thick, -{Stealth[length=2.5mm]}, draw=navyblue}
 ]
-\node (cand) [header] {Candidate Fact Triple: $c = (\text{subject}, \text{predicate}, \text{object}, \text{doc\_id}, \text{sent\_idx})$};
-\node (v1) [gate, below=0.45cm of cand] {\textbf{$v_1$ (Supported by Evidence):} Explicitly entailed by cited sentence; no ungrounded extrapolation};
-\node (v2) [gate, below of=v1] {\textbf{$v_2$ (Relevant to Target Gap):} Directly satisfies information need specified in gap $g_t$};
-\node (v3) [gate, below of=v2] {\textbf{$v_3$ (Correct Answer Type):} Matches semantic type expectation (e.g. numeric year, entity name)};
-\node (v4) [gate, below of=v3] {\textbf{$v_4$ (No Placeholders):} Rejects pronouns and ambiguous placeholders in favor of canonical entities};
-\node (v5) [gate, below of=v4] {\textbf{$v_5$ (Resolves Gap):} Substantively closes gap or unlocks downstream dependent gaps};
-\node (verdict) [header, below=0.45cm of v5] {Gate Verdict: If $\prod_{k=1}^5 v_k = 1 \implies \text{Commit to } \mathcal{K}_t$; \quad Else $\implies \text{Reject \& Replan}$};
 
-\draw [arrow] (cand) -- (v1);
-\draw [arrow] (v1) -- (v2);
-\draw [arrow] (v2) -- (v3);
-\draw [arrow] (v3) -- (v4);
-\draw [arrow] (v4) -- (v5);
-\draw [arrow] (v5) -- (verdict);
+% 1. Input Candidate Fact
+\node (cand) [header] {Candidate Fact Triple: $c = (\text{subject}, \text{predicate}, \text{object}, \text{doc\_id}, \text{sent\_idx})$};
+
+% 2. The 5-Point Evaluation Engine
+\node (engine) [box, below=0.7cm of cand] {
+    \textbf{The 5-Point Boolean Verification Contract $\mathcal{V}(c, \mathcal{D}_t, g_t)$}:\\[4pt]
+    \textbf{1. $v_1$ (Supported by Evidence):} Entailed verbatim by cited sentence; zero speculation.\\
+    \textbf{2. $v_2$ (Relevant to Target Gap):} Directly satisfies the specific target attribute of $g_t$.\\
+    \textbf{3. $v_3$ (Correct Answer Type):} Semantic type matches expected slot (e.g. numeric year, name).\\
+    \textbf{4. $v_4$ (No Placeholders):} Rejects ambiguous pronouns in favor of canonical named entities.\\
+    \textbf{5. $v_5$ (Resolves Gap):} Substantively closes current gap or unlocks downstream dependencies.
+};
+
+% 3. Verdict Blocks (Pass / Fail side-by-side)
+\node (pass) [decision, draw=passgreen, fill=codebg, below left=0.7cm and -0.1cm of engine] {
+    \color{passgreen}\textbf{PASS ($\prod_{k=1}^5 v_k = 1$)}\\[2pt]
+    \normalfont\scriptsize Commit to Shared State $\mathcal{K}_t$ as Verified Fact
+};
+
+\node (fail) [decision, draw=kairred, fill=codebg, below right=0.7cm and -0.1cm of engine] {
+    \color{kairred}\textbf{FAIL ($\prod_{k=1}^5 v_k = 0$)}\\[2pt]
+    \normalfont\scriptsize Reject Triple \& Trigger Search Replanning
+};
+
+% Connecting Arrows
+\draw [arrow] (cand.south) -- node[right, font=\scriptsize\bfseries\color{navyblue}] {Evaluate Contract} (engine.north);
+\draw [arrow] (engine.south) -| (pass.north);
+\draw [arrow] (engine.south) -| (fail.north);
+
 \end{tikzpicture}
 \caption{The 5-Point Boolean Verification Checkpoint Architecture}
 \label{fig:verifier_gate}
@@ -482,14 +499,26 @@ Multi-hop questions are structured by the Decomposer as a Directed Acyclic Graph
 \begin{figure}[!htbp]
 \centering
 \begin{tikzpicture}[
-    node distance=1.1cm,
-    dagblock/.style={rectangle, rounded corners=4pt, text width=9.0cm, align=center, minimum height=1.05cm, draw=navyblue, fill=codebg, font=\small},
+    node distance=1.6cm,
+    dagblock/.style={rectangle, rounded corners=4pt, text width=9.6cm, align=center, minimum height=1.15cm, draw=navyblue, fill=codebg, font=\small},
     edge/.style={thick, -{Stealth[length=2.5mm]}, draw=navyblue}
 ]
-\node (g1) [dagblock] {\textbf{Gap 1: Bridge Entity Discovery ($g_1$)}\\\textit{"Identify the director of the film Inception"}\\Prerequisites: None};
-\node (g2) [dagblock, below of=g1, yshift=-0.65cm] {\textbf{Gap 2: Terminal Target Resolution ($g_2$)}\\\textit{"Identify the birth year of the director found in $g_1$"}\\Prerequisites: [$g_1$]};
+\node (g1) [dagblock] {
+    \textbf{Gap 1: Bridge Entity Discovery ($g_1$)}\\[2pt]
+    \textit{"Identify the director of the film Inception"}\\[2pt]
+    {\footnotesize\color{navyblue}\textbf{Prerequisites:} None \quad $\vert$ \quad \textbf{Status:} Resolved}
+};
 
-\draw [edge] (g1) -- node[right, font=\footnotesize\bfseries\color{navyblue}, text width=4.5cm, align=left] {Bridge Fact Produced:\\$E_2 = \text{"Christopher Nolan"}$} (g2);
+\node (g2) [dagblock, below=1.5cm of g1] {
+    \textbf{Gap 2: Terminal Target Resolution ($g_2$)}\\[2pt]
+    \textit{"Identify the birth year of the director found in $g_1$"}\\[2pt]
+    {\footnotesize\color{navyblue}\textbf{Prerequisites:} [$g_1$] \quad $\vert$ \quad \textbf{Target Attribute:} Numeric Year}
+};
+
+\draw [edge] (g1.south) -- (g2.north)
+    node[midway, fill=white, draw=navyblue, rounded corners=3pt, inner sep=4pt, font=\scriptsize\bfseries\color{navyblue}] {
+        Bridge Fact Produced: $E_2 = \text{"Christopher Nolan"}$
+    };
 \end{tikzpicture}
 \caption{Decomposer Directed Acyclic Graph (DAG) with Terminal Target Constraint}
 \label{fig:dag_example}
